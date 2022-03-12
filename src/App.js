@@ -7,33 +7,30 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
+  Image,
+  Flex,
+  Spacer,
+  Heading
 } from '@chakra-ui/react';
+import Font from './custom_font'
+import theme from './custom_theme'
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
+      <Box maxWidth='100vw' minHeight='100vh'>
+        <Flex height='65px' bgColor='#6cffd7' position='fixed' top='0' left='0' right='0'>
+          <Box m='16px'>
+            <Heading fontSize='24pt' lineHeight='1' fontWeight='bold'>GERNEDGE</Heading>
+          </Box>
+          <Spacer />
+          <Box m='16px'>
+            <Text fontSize='24pt' lineHeight='1' fontWeight='bold'><Link>Archive</Link> | <Link>Info</Link></Text>
+          </Box>
+        </Flex>
+        <Image src='images/background_main.jpg' alt='background'/>
       </Box>
     </ChakraProvider>
   );
