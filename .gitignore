@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea
+
+public/fonts/
+public/images/
