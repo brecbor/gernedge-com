@@ -1,13 +1,26 @@
 import { ColorModeScript } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 import ReactDOM from 'react-dom';
 import App from './App';
+import Info from './Info'
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/info" element={<Info />} />
+        {/*<Route path="/archive" element={<Archive />} />
+        <Route path="/archive/:id" element={<ProjectPage />} />*/}
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
   document.getElementById('root')
 );
