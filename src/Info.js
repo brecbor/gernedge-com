@@ -5,10 +5,12 @@ import theme from './custom_theme'
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import { Link as RouterLink } from 'react-router-dom';
+import {ScrollToTop} from './ScrollToTop';
 
 function Info() {
   return (
     <ChakraProvider theme={theme}>
+      <ScrollToTop />
       <Box bgColor='rgb(204, 204, 204)' maxWidth='100vw' minHeight='100vh'>
         <Flex height='65px' position='fixed' top='0' left='0' right='0'>
           <Box m='16px'>

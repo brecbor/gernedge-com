@@ -5,10 +5,12 @@ import Font from './custom_font'
 import theme from './custom_theme'
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import {ScrollToTop} from './ScrollToTop';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
+      <ScrollToTop />
       <Box position='relative' maxWidth='100vw' minHeight='100vh'>
         <Flex height='65px' bgColor='#6cffd7' position='fixed' top='0' left='0' right='0'>
           <Box m='16px'>

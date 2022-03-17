@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import App from './App';
-import Info from './Info'
+import Info from './Info';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
