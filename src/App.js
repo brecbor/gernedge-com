@@ -13,11 +13,11 @@ function App() {
       <ScrollToTop />
       <Box position='relative' maxWidth='100vw' minHeight='100vh'>
         <Flex height='65px' bgColor='#6cffd7' position='fixed' top='0' left='0' right='0'>
-          <Box m='16px'>
+          <Box m='24px'>
             <Link as={RouterLink} to='/' fontSize='24pt' lineHeight='1' fontWeight='bold'>GERNEDGE</Link>
           </Box>
           <Spacer />
-          <Box m='16px'>
+          <Box m='24px'>
             <Text fontSize='24pt' lineHeight='1' fontWeight='bold'>
               <Link as={RouterLink} to='/info'>Archive</Link> | <Link as={RouterLink} to='/info'>Info</Link>
             </Text>
