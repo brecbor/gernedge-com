@@ -8,6 +8,7 @@ import {
 import ReactDOM from 'react-dom';
 import App from './App';
 import Info from './Info';
+import Archive from './Archive';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
@@ -17,8 +18,8 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/info" element={<Info />} />
-        {/*<Route path="/archive" element={<Archive />} />
-        <Route path="/archive/:id" element={<ProjectPage />} />*/}
+        <Route path="/archive" element={<Archive />} />
+        {/*<Route path="/archive/:id" element={<ProjectPage />} />*/}
       </Routes>
     </BrowserRouter>
   </StrictMode>,

@@ -19,7 +19,7 @@ function Info() {
           <Spacer />
           <Box m='24px'>
             <Text fontSize='24pt' lineHeight='1' fontWeight='bold'>
-              <Link as={RouterLink} to='/info'>Archive</Link> | <Link as={RouterLink} to='/info'>Info</Link>
+              <Link as={RouterLink} to='/archive'>Archive</Link> | <Link as={RouterLink} to='/info'>Info</Link>
             </Text>
           </Box>
         </Flex>
