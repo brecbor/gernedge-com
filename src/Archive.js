@@ -13,9 +13,7 @@ function Archive() {
     <BasePage title='Archive'>
       <HStack m='24px' spacing='24px' alignItems='top'>
         <VStack w='33%' spacing='96pt'>
-          <Box w='100%' h='500px' bg='tomato'>
-            1a
-          </Box>
+          <ArchiveButton name='units' title='UNITS' coverImage='3.jpg'/>
           <Box w='100%' h='320px' bg='yellow'>
             1b
           </Box>

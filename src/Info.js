@@ -26,7 +26,7 @@ function Info() {
           </Text>
         </VStack>
         <Box m='24px' width='100%'>
-          <Image width='60vw' src='images/tmp.jpg' alt='jernej'/>
+          <Image width='50vw' src='images/tmp.jpg' alt='jernej'/>
         </Box>
       </VStack>
     </BasePage>

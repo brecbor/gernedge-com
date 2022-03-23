@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Flex, Link, Spacer, Text } from '@chakra-ui/react';
+import { Box, ChakraProvider, Flex, Image, Link, Spacer, Text, VStack } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import React from 'react';
 import theme from './custom_theme';
@@ -12,9 +12,7 @@ function BasePage(props) {
       <Box bgColor='rgb(204, 204, 204)' maxWidth='100vw' minHeight='100vh'>
         <NavBar/>
         <Box height='50vh'/>
-
         {props.children}
-
         <Box height='100vh'/>
         <Box p='24px' textStyle='normal' fontSize='24pt' textAlign='left'>
           {props.title}
@@ -40,9 +38,12 @@ function NavBar(props) {
   );
 }
 
-function ArchiveButton() {
+function ArchiveButton(props) {
   return (
-    <div>bla</div>
+    <VStack>
+      <Image width='100%' src={'images/' + props.name + '/' + props.coverImage} alt={props.name + '-cover'}/>
+      <Link as={RouterLink} to={'/archive/' + props.name} textStyle='normal' fontSize='24pt'>{props.title}</Link>
+    </VStack>
   );
 }
 
