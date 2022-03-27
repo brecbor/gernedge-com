@@ -8,42 +8,41 @@ import { Link as RouterLink } from 'react-router-dom';
 import {ScrollToTop} from './ScrollToTop';
 import {BasePage, NavBar, ArchiveButton} from './elements';
 
+const projects = [
+  {name: 'units', title: 'UNITS', coverImage:'3.jpg'},
+  {name: '45_14', title: '45.588620, 14.447503', coverImage:'1.jpg'},
+  {name: 'memory_induced', title: 'MEMORY INDUCED', coverImage:'1.jpg'},
+  {name: 'field_recording', title: 'FR_200607', coverImage:'1.jpg'},
+  null,
+  {name: 'send_nudes', title: 'SEND NUDES', coverImage:'1.jpg'},
+];
+
 function Archive() {
+  let columns = 3;
+  let archive_buttons = [];
+  for(let i=0; i<columns; i++) {
+    archive_buttons.push([]);
+    for(let j=i; j<projects.length; j+=columns) {
+      if(projects[j] !== null) {
+        archive_buttons[i].push(<ArchiveButton name={projects[j].name} title={projects[j].title}
+                                               coverImage={projects[j].coverImage}/>);
+      }
+    }
+  }
+  console.log(archive_buttons);
   return (
     <BasePage title='Archive'>
       <HStack m='24px' spacing='24px' alignItems='top'>
         <VStack w='33%' spacing='96pt'>
-          <ArchiveButton name='units' title='UNITS' coverImage='3.jpg'/>
-          <Box w='100%' h='320px' bg='yellow'>
-            1b
-          </Box>
-          <Box w='100%' h='600px' bg='blue.100'>
-            1c
-          </Box>
+          {archive_buttons[0]}
         </VStack>
 
         <VStack w='33%' spacing='96pt'>
-          <Box w='100%' h='620px' bg='green.50'>
-            2a
-          </Box>
-          <Box w='100%' h='700px' bg='orange.200'>
-            2b
-          </Box>
-          <Box w='100%' h='550px' bg='aqua'>
-            2c
-          </Box>
+          {archive_buttons[1]}
         </VStack>
 
         <VStack w='33%' spacing='96pt'>
-          <Box w='100%' h='300px' bg='pink.300'>
-            3a
-          </Box>
-          <Box w='100%' h='420px' bg='green.100'>
-            3b
-          </Box>
-          <Box w='100%' h='690px' bg='white'>
-            3c
-          </Box>
+          {archive_buttons[2]}
         </VStack>
       </HStack>
     </BasePage>
