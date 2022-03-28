@@ -16,7 +16,7 @@ function App() {
         <NavBar bgColor='#6cffd7' hoverColor='black'/>
         <Image src='images/background_main.jpg' alt='background'/>
         <Box position='absolute' bottom='0' left='0' m='16px'>
-          <Text fontSize='16pt' lineHeight='1' fontWeight='bold' color='#6cffd7'>Code by Bor Brecelj. &copy; 2017—2022, Jernej Šimec, all rights reserved.</Text>
+          <Text fontSize='16px' lineHeight='1' fontWeight='bold' color='#6cffd7'>Code by Bor Brecelj. &copy; 2017—2022, Jernej Šimec, all rights reserved.</Text>
         </Box>
       </Box>
     </ChakraProvider>

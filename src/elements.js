@@ -14,7 +14,7 @@ function BasePage(props) {
         <Box height='50vh'/>
         {props.children}
         <Box height='100vh'/>
-        <Box p='24px' textStyle='normal' fontSize='24pt' textAlign='left'>
+        <Box p='24px' textStyle='normal' fontSize='24px' textAlign='left'>
           {props.title}
         </Box>
       </Box>
@@ -44,7 +44,7 @@ function ArchiveButton(props) {
   return (
     <VStack>
       <Image width='100%' src={'images/' + props.name + '/' + props.coverImage} alt={props.name + '-cover'}/>
-      <Link as={RouterLink} to={'/archive/' + props.name} textStyle='normal' fontSize='24pt'>{props.title}</Link>
+      <Link as={RouterLink} to={'/archive/' + props.name} textStyle='normal' fontSize='24px'>{props.title}</Link>
     </VStack>
   );
 }
@@ -65,4 +65,4 @@ function MyLink(props) {
   );
 }
 
-export {BasePage, NavBar, ArchiveButton};
+export {BasePage, NavBar, ArchiveButton, TopAlignedText, MyLink};

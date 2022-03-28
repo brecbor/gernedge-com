@@ -11,8 +11,8 @@ import {BasePage, NavBar, ArchiveButton} from './elements';
 function Info() {
   return (
     <BasePage title='Info'>
-      <VStack spacing='96pt' m='24px' textStyle='normal' fontSize='32pt' textAlign='justify'>
-        <VStack spacing='48pt'>
+      <VStack spacing='96px' m='24px' textStyle='normal' fontSize='32px' textAlign='justify'>
+        <VStack spacing='48px'>
           <Text>Jernej Šimec (1997) — an inquisitive visual artist using light as a tool for exploring the common
             ground between photography and humanity, thus reinterpreting the notion of existence and challenging our
             perceptions of nature. During his studies, he completed a full year at the Academy of Fine Arts in Warsaw
