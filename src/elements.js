@@ -26,15 +26,15 @@ function NavBar(props) {
   return (
     <Flex height='65px' position='fixed' top='0' left='0' right='0' bgColor={props.bgColor}>
       <Box m='24px'>
-        <MyText>
+        <TopAlignedText fontSize='24px'>
           <MyLink to='/' hoverColor={props.hoverColor}>GERNEDGE</MyLink>
-        </MyText>
+        </TopAlignedText>
       </Box>
       <Spacer />
       <Box m='24px'>
-        <MyText>
+        <TopAlignedText fontSize='24px'>
           <MyLink to='/archive' hoverColor={props.hoverColor}>Archive</MyLink> | <MyLink to='/info' hoverColor={props.hoverColor}>Info</MyLink>
-        </MyText>
+        </TopAlignedText>
       </Box>
     </Flex>
   );
@@ -49,9 +49,9 @@ function ArchiveButton(props) {
   );
 }
 
-function MyText(props) {
+function TopAlignedText(props) {
   return (
-    <Text fontSize='24px' fontWeight='bold' position='relative' top='-9px'>
+    <Text fontSize={props.fontSize} fontWeight='bold' position='relative' top='-0.38em'>
       {props.children}
     </Text>
   );
