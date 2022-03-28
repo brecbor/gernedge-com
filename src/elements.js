@@ -26,11 +26,11 @@ function NavBar(props) {
   return (
     <Flex height='65px' position='fixed' top='0' left='0' right='0' bgColor={props.bgColor}>
       <Box m='24px'>
-        <Link as={RouterLink} to='/' fontSize='24pt' lineHeight='1' fontWeight='bold'>GERNEDGE</Link>
+        <Link as={RouterLink} to='/' fontSize='24px' fontWeight='bold' position='relative' top='-9px'>GERNEDGE</Link>
       </Box>
       <Spacer />
       <Box m='24px'>
-        <Text fontSize='24pt' lineHeight='1' fontWeight='bold'>
+        <Text fontSize='24pt' fontSize='24px' fontWeight='bold' position='relative' top='-9px'>
           <Link as={RouterLink} to='/archive'>Archive</Link> | <Link as={RouterLink} to='/info'>Info</Link>
         </Text>
       </Box>
