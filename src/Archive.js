@@ -32,16 +32,16 @@ function Archive() {
   console.log(archive_buttons);
   return (
     <BasePage title='Archive'>
-      <HStack m='24px' spacing='24px' alignItems='top'>
-        <VStack w='33%' spacing='96px'>
+      <HStack m='1.25vw' spacing='1.25vw' alignItems='top'>
+        <VStack w='33%' spacing='5vw'>
           {archive_buttons[0]}
         </VStack>
 
-        <VStack w='33%' spacing='96px'>
+        <VStack w='33%' spacing='5vw'>
           {archive_buttons[1]}
         </VStack>
 
-        <VStack w='33%' spacing='96px'>
+        <VStack w='33%' spacing='5vw'>
           {archive_buttons[2]}
         </VStack>
       </HStack>

@@ -11,8 +11,8 @@ import { BasePage, NavBar, ArchiveButton, TopAlignedText } from './elements';
 function Info() {
   return (
     <BasePage title='Info'>
-      <VStack spacing='96px' m='24px' textStyle='normal' fontSize='32px' textAlign='justify' lineHeight='48px' color='black'>
-        <VStack spacing='48px'>
+      <VStack spacing='5vw' m='1.25vw' textStyle='normal' fontSize='1.67vw' textAlign='justify' lineHeight='2.5vw' color='black'>
+        <VStack spacing='2.5vw'>
           <TopAlignedText>Jernej Šimec (1997) — an inquisitive visual artist using light as a tool for exploring the common
             ground between photography and humanity, thus reinterpreting the notion of existence and challenging our
             perceptions of nature. During his studies, he completed a full year at the Academy of Fine Arts in Warsaw
@@ -25,7 +25,7 @@ function Info() {
             on <Link color='#6cffd7' href='mailto:jernej.simec@gmail.com' isExternal>e-mail</Link> or <Link color='#6cffd7' href='https://www.instagram.com/jernejsimec/' isExternal>Instagram</Link>.
           </TopAlignedText>
         </VStack>
-        <Box m='24px' width='100%'>
+        <Box m='1.25vw' width='100%'>
           <Image width='50vw' src='images/tmp.jpg' alt='jernej'/>
         </Box>
       </VStack>

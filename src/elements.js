@@ -14,7 +14,7 @@ function BasePage(props) {
         <Box height='50vh'/>
         {props.children}
         <Box height='100vh'/>
-        <Box p='24px' textStyle='normal' fontSize='24px' textAlign='left'>
+        <Box p='1.25vw' textStyle='normal' fontSize='1.25vw' textAlign='left'>
           {props.title}
         </Box>
       </Box>
@@ -24,15 +24,15 @@ function BasePage(props) {
 
 function NavBar(props) {
   return (
-    <Flex height='65px' position='fixed' top='0' left='0' right='0' bgColor={props.bgColor} color='black'>
-      <Box m='24px'>
-        <TopAlignedText fontSize='24px'>
+    <Flex height='3.385vw' position='fixed' top='0' left='0' right='0' bgColor={props.bgColor} color='black'>
+      <Box m='1.25vw'>
+        <TopAlignedText fontSize='1.25vw'>
           <MyLink to='/' hoverColor={props.hoverColor}>GERNEDGE</MyLink>
         </TopAlignedText>
       </Box>
       <Spacer />
-      <Box m='24px'>
-        <TopAlignedText fontSize='24px'>
+      <Box m='1.25vw'>
+        <TopAlignedText fontSize='1.25vw'>
           <MyLink to='/archive' hoverColor={props.hoverColor}>Archive</MyLink> | <MyLink to='/info' hoverColor={props.hoverColor}>Info</MyLink>
         </TopAlignedText>
       </Box>
@@ -44,7 +44,7 @@ function ArchiveButton(props) {
   return (
     <VStack>
       <Image width='100%' src={'images/' + props.name + '/' + props.coverImage} alt={props.name + '-cover'}/>
-      <Link as={RouterLink} to={'/archive/' + props.name} textStyle='normal' fontSize='24px'>{props.title}</Link>
+      <Link as={RouterLink} to={'/archive/' + props.name} textStyle='normal' fontSize='1.25vw'>{props.title}</Link>
     </VStack>
   );
 }
