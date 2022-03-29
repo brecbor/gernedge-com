@@ -11,7 +11,7 @@ import { BasePage, NavBar, ArchiveButton, TopAlignedText } from './elements';
 function Info() {
   return (
     <BasePage title='Info'>
-      <VStack spacing='96px' m='24px' textStyle='normal' fontSize='32px' textAlign='justify' lineHeight='48pt'>
+      <VStack spacing='96px' m='24px' textStyle='normal' fontSize='32px' textAlign='justify' lineHeight='48px' color='black'>
         <VStack spacing='48px'>
           <TopAlignedText>Jernej Šimec (1997) — an inquisitive visual artist using light as a tool for exploring the common
             ground between photography and humanity, thus reinterpreting the notion of existence and challenging our
@@ -21,7 +21,7 @@ function Info() {
             to <Link color='#6cffd7' href='https://postplaneta.com/' isExternal>POST_PLANETA</Link>
             . He is available for
             commissioned work all around the world.</TopAlignedText>
-          <TopAlignedText width='100%'>For inquiries on prints, collaborations or commissioned work please contact me
+          <TopAlignedText width='100%' textAlign='left'>For inquiries on prints, collaborations or commissioned work please contact me
             on <Link color='#6cffd7' href='mailto:jernej.simec@gmail.com' isExternal>e-mail</Link> or <Link color='#6cffd7' href='https://www.instagram.com/jernejsimec/' isExternal>Instagram</Link>.
           </TopAlignedText>
         </VStack>
