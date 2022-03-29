@@ -10,7 +10,7 @@ function BasePage(props) {
     <ChakraProvider theme={theme}>
       <ScrollToTop />
       <Box bgColor='rgb(204, 204, 204)' maxWidth='100vw' minHeight='100vh' color='black'>
-        <NavBar hoverColor='#6cffd7'/>
+        <NavBar/>
         <Box height='50vh'/>
         {props.children}
         <Box height='100vh'/>
@@ -24,16 +24,16 @@ function BasePage(props) {
 
 function NavBar(props) {
   return (
-    <Flex height='3.385vw' position='fixed' top='0' left='0' right='0' bgColor={props.bgColor} color='black'>
+    <Flex height='3.385vw' position='fixed' top='0' left='0' right='0' color={props.color}>
       <Box m='1.25vw'>
         <TopAlignedText fontSize='1.25vw'>
-          <MyLink to='/' hoverColor={props.hoverColor}>GERNEDGE</MyLink>
+          <MyLink to='/'>GERNEDGE</MyLink>
         </TopAlignedText>
       </Box>
       <Spacer />
       <Box m='1.25vw'>
         <TopAlignedText fontSize='1.25vw'>
-          <MyLink to='/archive' hoverColor={props.hoverColor}>Archive</MyLink> | <MyLink to='/info' hoverColor={props.hoverColor}>Info</MyLink>
+          <MyLink to='/archive'>Archive</MyLink>  <MyLink to='/info'>Info</MyLink>
         </TopAlignedText>
       </Box>
     </Flex>
