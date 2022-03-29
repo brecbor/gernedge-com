@@ -65,4 +65,13 @@ function MyLink(props) {
   );
 }
 
-export {BasePage, NavBar, ArchiveButton, TopAlignedText, MyLink};
+function MyExternalLink(props) {
+  return (
+    <Link color={props.color} href={props.href} isExternal _hover={{textDecoration: 'none', color: props.hoverColor}}>
+      {props.children}
+    </Link>
+  );
+}
+
+
+export {BasePage, NavBar, ArchiveButton, TopAlignedText, MyLink, MyExternalLink};
