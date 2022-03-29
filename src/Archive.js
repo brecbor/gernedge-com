@@ -17,33 +17,29 @@ const projects = [
   {name: 'send_nudes', title: 'SEND NUDES', coverImage:'1.jpg'},
 ];
 
-function Archive() {
-  let columns = 3;
+function Archive(props) {
   let archive_buttons = [];
-  for(let i=0; i<columns; i++) {
+  for(let i=0; i<props.columns; i++) {
     archive_buttons.push([]);
-    for(let j=i; j<projects.length; j+=columns) {
+    for(let j=i; j<projects.length; j+=props.columns) {
       if(projects[j] !== null) {
         archive_buttons[i].push(<ArchiveButton name={projects[j].name} title={projects[j].title}
                                                coverImage={projects[j].coverImage}/>);
       }
     }
   }
-  console.log(archive_buttons);
+  let columns = [];
+  for(let i=0; i<props.columns; i++) {
+    columns.push(
+      <VStack w={(100 / props.columns).toString() + '%'} spacing='5vw'>
+        {archive_buttons[i]}
+      </VStack>
+    );
+  }
   return (
     <BasePage title='Archive'>
       <HStack m='1.25vw' spacing='1.25vw' alignItems='top'>
-        <VStack w='33%' spacing='5vw'>
-          {archive_buttons[0]}
-        </VStack>
-
-        <VStack w='33%' spacing='5vw'>
-          {archive_buttons[1]}
-        </VStack>
-
-        <VStack w='33%' spacing='5vw'>
-          {archive_buttons[2]}
-        </VStack>
+        {columns}
       </HStack>
     </BasePage>
   );

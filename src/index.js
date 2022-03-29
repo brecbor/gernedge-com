@@ -18,7 +18,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/info" element={<Info />} />
-        <Route path="/archive" element={<Archive />} />
+        <Route path="/archive" element={<Archive columns={3}/>} />
         {/*<Route path="/archive/:id" element={<ProjectPage />} />*/}
       </Routes>
     </BrowserRouter>
