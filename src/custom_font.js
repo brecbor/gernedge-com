@@ -7,7 +7,7 @@ const Font = () => (
       @font-face {
         font-family: "MonumentGrotesk";
         src: local("MonumentGrotesk"),
-        url("fonts/MonumentGrotesk-Bold.otf") format("opentype");
+        url("/fonts/MonumentGrotesk-Bold.otf") format("opentype");
         font-weight: bold;
       }
       /* latin */ 

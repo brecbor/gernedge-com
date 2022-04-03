@@ -43,7 +43,7 @@ function NavBar(props) {
 function ArchiveButton(props) {
   return (
     <VStack>
-      <Image width='100%' src={'images/' + props.name + '/' + props.coverImage} alt={props.name + '-cover'}/>
+      <Image width='100%' src={'/images/' + props.name + '/' + props.coverImage} alt={props.name + '-cover'}/>
       <Link as={RouterLink} to={'/archive/' + props.name} textStyle='normal' fontSize='1.25vw'>{props.title}</Link>
     </VStack>
   );

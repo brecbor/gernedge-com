@@ -26,7 +26,7 @@ function Info() {
           </TopAlignedText>
         </VStack>
         <Box m='1.25vw' width='100%'>
-          <Image width='50vw' src='images/jerry.jpg' alt='jernej'/>
+          <Image width='50vw' src='/images/jerry.jpg' alt='jernej'/>
         </Box>
       </VStack>
     </BasePage>
