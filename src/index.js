@@ -11,6 +11,7 @@ import Info from './Info';
 import Archive from './Archive';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import ProjectPage from './ProjectPage';
 
 ReactDOM.render(
   <StrictMode>
@@ -19,7 +20,7 @@ ReactDOM.render(
         <Route path="/" element={<App />} />
         <Route path="/info" element={<Info />} />
         <Route path="/archive" element={<Archive columns={3}/>} />
-        {/*<Route path="/archive/:id" element={<ProjectPage />} />*/}
+        <Route path="/archive/:id" element={<ProjectPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
