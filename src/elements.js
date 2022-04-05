@@ -1,24 +1,22 @@
 import { Box, ChakraProvider, Flex, Image, Link, Spacer, Text, VStack } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import React from 'react';
+import Font from './custom_font';
 import theme from './custom_theme';
 import { ScrollToTop } from './ScrollToTop';
 
 
 function BasePage(props) {
   return (
-    <ChakraProvider theme={theme}>
-      <ScrollToTop />
-      <Box bgColor='rgb(204, 204, 204)' maxWidth='100vw' minHeight='100vh' color='black'>
-        <NavBar/>
-        <Box height='50vh'/>
-        {props.children}
-        <Box height='100vh'/>
-        <Box p='1.25vw' textStyle='normal' fontSize='1.25vw' textAlign='left'>
-          {props.title}
-        </Box>
+    <Box bgColor='rgb(204, 204, 204)' maxWidth='100vw' minHeight='100vh' color='black'>
+      <NavBar/>
+      <Box height='50vh'/>
+      {props.children}
+      <Box height='100vh'/>
+      <Box p='1.25vw' textStyle='normal' fontSize='1.25vw' textAlign='left'>
+        {props.title}
       </Box>
-    </ChakraProvider>
+    </Box>
   );
 }
 
@@ -51,7 +49,7 @@ function ArchiveButton(props) {
 
 function TopAlignedText(props) {
   return (
-    <Text fontSize={props.fontSize} fontWeight='bold' position='relative' top='-0.38em'>
+    <Text fontSize={props.fontSize} fontWeight='bold' position='relative' top='-0.38em' fontFamily='MonumentGrotesk'>
       {props.children}
     </Text>
   );

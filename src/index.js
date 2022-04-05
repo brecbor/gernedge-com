@@ -1,4 +1,4 @@
-import { ColorModeScript } from '@chakra-ui/react';
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
 import {
   BrowserRouter,
@@ -12,17 +12,24 @@ import Archive from './Archive';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import ProjectPage from './ProjectPage';
+import theme from './custom_theme';
+import Font from './custom_font';
+import { ScrollToTop } from './ScrollToTop';
 
 ReactDOM.render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/info" element={<Info />} />
-        <Route path="/archive" element={<Archive />} />
-        <Route path="/archive/:id" element={<ProjectPage />} />
-      </Routes>
-    </BrowserRouter>
+    <ChakraProvider theme={theme}>
+      <Font />
+      <ScrollToTop />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/archive" element={<Archive />} />
+          <Route path="/archive/:id" element={<ProjectPage />} />
+        </Routes>
+      </BrowserRouter>
+    </ChakraProvider>
   </StrictMode>,
   document.getElementById('root')
 );
