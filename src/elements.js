@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Flex, Image, Link, Spacer, Text, VStack } from '@chakra-ui/react';
+import { Box, ChakraProvider, Flex, Image, Link, Spacer, Text, VStack, HStack } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import React from 'react';
 import Font from './custom_font';
@@ -30,9 +30,14 @@ function NavBar(props) {
       </Box>
       <Spacer />
       <Box m='1.25vw'>
+      <HStack spacing='2.5vw'>
         <TopAlignedText textStyle='normal'>
-          <MyLink to='/archive'>Archive</MyLink>  <MyLink to='/info'>Info</MyLink>
+          <MyLink to='/archive'>Archive</MyLink>
         </TopAlignedText>
+        <TopAlignedText textStyle='normal'>
+          <MyLink to='/info'>Info</MyLink>
+        </TopAlignedText>
+      </HStack>
       </Box>
     </Flex>
   );
