@@ -90,6 +90,8 @@ const content = {
 
 function ProjectPage() {
   let { id } = useParams();
+  console.log(window.screen.height);
+  console.log(window.screen.width);
 
   return (
     <BasePage title={content[id].title}>

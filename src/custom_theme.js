@@ -16,6 +16,6 @@ const theme = extendTheme({
       lineHeight: '1'
     }
   }
-})
+});
 
 export default theme
