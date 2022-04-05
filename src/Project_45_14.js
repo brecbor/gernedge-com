@@ -1,8 +1,11 @@
-import { Grid, GridItem, Image, VStack } from '@chakra-ui/react';
+import { Grid, GridItem, Image, VStack, Box, useDimensions } from '@chakra-ui/react';
 import React from 'react';
 
 
 function Project_45_14() {
+  const image5Ref = React.useRef();
+  const dimensions = useDimensions(image5Ref);
+  console.log(dimensions);
 
   return (
     <VStack spacing={0}>
@@ -19,7 +22,15 @@ function Project_45_14() {
       </Grid>
       {/*<Box width='100%' height='50vh'/>*/}
       <Image pt='50vh' width='100%' src='/images/45_14/4.jpg' alt='45_14/1'/>
-      <Image pt='50vh' width='100%' src='/images/45_14/6.png' alt='45_14/1'/>
+      <Box height='50vh'/>
+      <Box position='relative'>
+
+        <Image position='relative' width='100%' src='/images/45_14/6.png' alt='45_14/1'/>
+        <Box position='absolute' top={0 /*image5Ref == null ? 0 : image5Ref.contentBox.height / 2*/} width='100%'>
+          <Image ref={image5Ref} mx='auto' width='17%' src='/images/45_14/5.jpg' alt='45_14/1'/>
+        </Box>
+
+      </Box>
       {/*<Grid width='100%' templateRows='repeat(5, 15.63vw) 50vh repeat(5, 15.63vw)' templateColumns='repeat(6, 1fr)' gap='0' >
         <GridItem bg='tomato' />
         <GridItem bg='papayawhip' />
