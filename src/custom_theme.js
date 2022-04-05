@@ -18,17 +18,18 @@ const theme = extendTheme({
     small: {
       fontFamily: 'MonumentGrotesk',
       fontWeight: 'bold',
-      fontSize: '0.83vw'
+      fontSize: {base: '0.75em', md: '0.83vw'}
     },
     normal: {
       fontFamily: 'MonumentGrotesk',
       fontWeight: 'bold',
-      fontSize: '1.25vw'
+      fontSize: {base: '1em', md: '1.25vw'}
     },
     big: {
       fontFamily: 'MonumentGrotesk',
       fontWeight: 'bold',
-      fontSize: '1.67vw'
+      fontSize: {base: '1.25em', md: '1.67vw'},
+      lineHeight: {base: '1.5em', md: '2.5vw'}
     }
   }
 });
