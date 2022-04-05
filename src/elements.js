@@ -13,7 +13,7 @@ function BasePage(props) {
       <Box height='50vh'/>
       {props.children}
       <Box height='100vh'/>
-      <Box p='1.25vw' textStyle='normal' fontSize='1.25vw' textAlign='left'>
+      <Box p='1.25vw' textStyle='normal' textAlign='left'>
         {props.title}
       </Box>
     </Box>
@@ -24,13 +24,13 @@ function NavBar(props) {
   return (
     <Flex height='3.385vw' position='fixed' top='0' left='0' right='0' color={props.color}>
       <Box m='1.25vw'>
-        <TopAlignedText fontSize='1.25vw'>
+        <TopAlignedText textStyle='normal'>
           <MyLink to='/'>GERNEDGE</MyLink>
         </TopAlignedText>
       </Box>
       <Spacer />
       <Box m='1.25vw'>
-        <TopAlignedText fontSize='1.25vw'>
+        <TopAlignedText textStyle='normal'>
           <MyLink to='/archive'>Archive</MyLink>  <MyLink to='/info'>Info</MyLink>
         </TopAlignedText>
       </Box>
@@ -42,14 +42,14 @@ function ArchiveButton(props) {
   return (
     <VStack>
       <Image width='100%' src={'/images/' + props.name + '/' + props.coverImage} alt={props.name + '-cover'}/>
-      <Link as={RouterLink} to={'/archive/' + props.name} textStyle='normal' fontSize='1.25vw'>{props.title}</Link>
+      <Link as={RouterLink} to={'/archive/' + props.name} textStyle='normal'>{props.title}</Link>
     </VStack>
   );
 }
 
 function TopAlignedText(props) {
   return (
-    <Text fontSize={props.fontSize} fontWeight='bold' position='relative' top='-0.38em' fontFamily='MonumentGrotesk'>
+    <Text position='relative' top='-0.38em' textStyle={props.textStyle}>
       {props.children}
     </Text>
   );
@@ -57,7 +57,7 @@ function TopAlignedText(props) {
 
 function MyLink(props) {
   return (
-    <Link as={RouterLink} to={props.to} _hover={{textDecoration: 'none', color: props.hoverColor}}>
+    <Link as={RouterLink} textStyle={props.textStyle} to={props.to} _hover={{textDecoration: 'none', color: props.hoverColor}}>
       {props.children}
     </Link>
   );
@@ -65,7 +65,7 @@ function MyLink(props) {
 
 function MyExternalLink(props) {
   return (
-    <Link color={props.color} href={props.href} isExternal _hover={{textDecoration: 'none', color: props.hoverColor}}>
+    <Link textStyle={props.textStyle} color={props.color} href={props.href} isExternal _hover={{textDecoration: 'none', color: props.hoverColor}}>
       {props.children}
     </Link>
   );

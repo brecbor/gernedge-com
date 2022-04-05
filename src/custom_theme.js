@@ -11,9 +11,24 @@ const theme = extendTheme({
     }*///'MonumentGrotesk, sans-serif',
   },
   textStyles: {
-    normal: {
+    base: {
+      fontFamily: 'MonumentGrotesk',
       fontWeight: 'bold',
-      lineHeight: '1'
+    },
+    small: {
+      fontFamily: 'MonumentGrotesk',
+      fontWeight: 'bold',
+      fontSize: '0.83vw'
+    },
+    normal: {
+      fontFamily: 'MonumentGrotesk',
+      fontWeight: 'bold',
+      fontSize: '1.25vw'
+    },
+    big: {
+      fontFamily: 'MonumentGrotesk',
+      fontWeight: 'bold',
+      fontSize: '1.67vw'
     }
   }
 });

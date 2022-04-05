@@ -11,7 +11,7 @@ import { BasePage, NavBar, ArchiveButton, TopAlignedText, MyExternalLink } from 
 function Info() {
   return (
     <BasePage title='Info'>
-      <VStack spacing='5vw' m='1.25vw' textStyle='normal' fontSize='1.67vw' textAlign='justify' lineHeight='2.5vw' color='black'>
+      <VStack spacing='5vw' m='1.25vw' textStyle='big' textAlign='justify' lineHeight='2.5vw' color='black'>
         <VStack spacing='2.5vw' alignItems='left'>
           <TopAlignedText>Jernej Šimec (1997) — an inquisitive visual artist using light as a tool for exploring the common
             ground between photography and humanity, thus reinterpreting the notion of existence and challenging our
