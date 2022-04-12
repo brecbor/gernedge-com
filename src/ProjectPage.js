@@ -27,7 +27,7 @@ const content = {
   },
   'field_recording': {
     'bgColor': 'white',
-    'title': 'Vistula river, 2020',
+    'title': 'FR_200607, 2020',
     'content': (
       <Box width='100%' position='relative' p='56.25% 0 0 0'>
         <iframe src="https://player.vimeo.com/video/655024508?h=e226ff68bd&autoplay=1&title=0&byline=0&portrait=0"
