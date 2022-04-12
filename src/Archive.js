@@ -37,7 +37,7 @@ function Archive() {
   let columns = [];
   for(let i=0; i<n_columns; i++) {
     columns.push(
-      <VStack w={(100 / n_columns).toString() + '%'} spacing='64px'>
+      <VStack w={(100 / n_columns).toString() + '%'} spacing='48px'>
         {archive_buttons[i]}
       </VStack>
     );
