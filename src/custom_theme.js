@@ -18,20 +18,20 @@ const theme = extendTheme({
     small: {
       fontFamily: 'MonumentGrotesk',
       fontWeight: 'bold',
-      fontSize: {base: '0.75em', md: '0.83vw'}
+      fontSize: '0.75em' //{base: '0.75em', md: '0.83vw'}
     },
     normal: {
       fontFamily: 'MonumentGrotesk',
       fontWeight: 'bold',
-      fontSize: {base: '1em', md: '1.25vw'}
+      fontSize: '1em' //{base: '1em', md: '1.25vw'}
     },
     big: {
       fontFamily: 'MonumentGrotesk',
       fontWeight: 'bold',
-      fontSize: {base: '1.25em', md: '1.67vw'},
-      lineHeight: {base: '1.5em', md: '2.5vw'}
+      fontSize: '1.25em', //{base: '1.25em', md: '1.67vw'},
+      lineHeight: '1.5em' //{base: '1.5em', md: '2.5vw'}
     }
-  }
+  },
 });
 
 export default theme
