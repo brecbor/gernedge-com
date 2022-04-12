@@ -8,7 +8,7 @@ import { ScrollToTop } from './ScrollToTop';
 
 function BasePage(props) {
   return (
-    <Box bgColor='rgb(204, 204, 204)' maxWidth='100vw' minHeight='100vh' color='black'>
+    <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100vh' color='black'>
       <NavBar/>
       <Box height='50vh'/>
       {props.children}
