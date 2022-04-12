@@ -20,7 +20,6 @@ ReactDOM.render(
   <StrictMode>
     <ChakraProvider theme={theme}>
       <Font />
-      <ScrollToTop />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
