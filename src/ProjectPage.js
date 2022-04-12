@@ -53,8 +53,12 @@ const content = {
 
 function ProjectPage() {
   let { id } = useParams();
-  console.log(window.screen.height);
-  console.log(window.screen.width);
+  console.log('Window height: ' + window.screen.height);
+  console.log('Window width:  ' + window.screen.width);
+  console.log('Viewport height: ' + window.innerHeight);
+  console.log('Viewport width:  ' + window.innerWidth);
+  console.log('Document body client width: ' + document.body.clientWidth);
+  console.log('Document body scroll width:  ' + document.body.scrollWidth);
 
   return (
     <BasePage title={content[id].title} bgColor={content[id].bgColor}>
