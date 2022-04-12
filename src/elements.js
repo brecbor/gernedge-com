@@ -13,7 +13,7 @@ function BasePage(props) {
       <Box height='50vh'/>
       {props.children}
       <Box height='100vh'/>
-      <Box p='1.25vw' textStyle='normal' textAlign='left'>
+      <Box p='1rem' textStyle='normal' textAlign='left'>
         {props.title}
       </Box>
     </Box>
@@ -22,15 +22,15 @@ function BasePage(props) {
 
 function NavBar(props) {
   return (
-    <Flex height='3.385vw' position='fixed' top='0' left='0' right='0' color={props.color}>
-      <Box m='1.25vw'>
+    <Flex height='3rem' position='fixed' top='0' left='0' right='0' color={props.color}>
+      <Box m='1rem'>
         <TopAlignedText textStyle='normal'>
           <MyLink to='/'>GERNEDGE</MyLink>
         </TopAlignedText>
       </Box>
       <Spacer />
-      <Box m='1.25vw'>
-      <HStack spacing='2.5vw'>
+      <Box m='1rem'>
+      <HStack spacing='2rem'>
         <TopAlignedText textStyle='normal'>
           <MyLink to='/archive'>Archive</MyLink>
         </TopAlignedText>
