@@ -18,10 +18,10 @@ function Project_45_14() {
     <VStack spacing={0}>
       <Grid templateColumns='repeat(6, 1fr)' gap='0'>
         <GridItem rowStart={1} rowEnd={2} colStart={5} colEnd={7}>
-          <Image pl='0.5rem' width='100%' src='/images/45_14/1.jpg' alt='45_14/1'/>
+          <Image pl='8px' width='100%' src='/images/45_14/1.jpg' alt='45_14/1'/>
         </GridItem>
         <GridItem rowStart={1} rowEnd={2} colStart={3} colEnd={5}>
-          <Image pl='0.5rem' pr='0.5rem' pt={img1_height/2 + 'px'} width='100%' src='/images/45_14/2.jpg' alt='45_14/1'/>
+          <Image pl='8px' pr='8px' pt={img1_height/2 + 'px'} width='100%' src='/images/45_14/2.jpg' alt='45_14/1'/>
         </GridItem>
         <GridItem rowStart={1} rowEnd={2} colStart={1} colEnd={3}>
           <Image mt={img3_pt + 'px'} height={img3_height + 'px'} src='/images/45_14/3.jpg' alt='45_14/1'/>

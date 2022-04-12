@@ -14,7 +14,7 @@ function App() {
       <ScrollToTop />
       <NavBar color='rgb(204, 204, 204)'/>
       <Image src='/images/background.jpg' alt='background' minHeight='100vh' minWidth='100vw'/>
-      <Box position='absolute' bottom='0' left='0' m='1rem'>
+      <Box position='absolute' bottom='0' left='0' m='16px'>
         <Text textStyle='small' lineHeight='1'>Code by Bor Brecelj. &copy; Images Jernej Šimec.</Text>
       </Box>
     </Box>

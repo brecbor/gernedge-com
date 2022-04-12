@@ -37,14 +37,14 @@ function Archive() {
   let columns = [];
   for(let i=0; i<n_columns; i++) {
     columns.push(
-      <VStack w={(100 / n_columns).toString() + '%'} spacing='4rem'>
+      <VStack w={(100 / n_columns).toString() + '%'} spacing='64px'>
         {archive_buttons[i]}
       </VStack>
     );
   }
   return (
     <BasePage title='Archive'>
-      <HStack m='1rem' spacing='1rem' alignItems='top'>
+      <HStack m='16px' spacing='16px' alignItems='top'>
         {columns}
       </HStack>
     </BasePage>

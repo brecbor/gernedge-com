@@ -14,7 +14,7 @@ function BasePage(props) {
       <Box height='50vh'/>
       {props.children}
       <Box height='100vh'/>
-      <Box p='1rem' textStyle='normal' textAlign='left'>
+      <Box p='16px' textStyle='normal' textAlign='left'>
         {props.title}
       </Box>
     </Box>
@@ -23,15 +23,15 @@ function BasePage(props) {
 
 function NavBar(props) {
   return (
-    <Flex height='3rem' position='fixed' top='0' left='0' right='0' color={props.color}>
-      <Box m='1rem'>
+    <Flex height='48px' position='fixed' top='0' left='0' right='0' color={props.color}>
+      <Box m='16px'>
         <TopAlignedText textStyle='normal'>
           <MyLink to='/'>GERNEDGE</MyLink>
         </TopAlignedText>
       </Box>
       <Spacer />
-      <Box m='1rem'>
-      <HStack spacing='2rem'>
+      <Box m='16px'>
+      <HStack spacing='32px'>
         <TopAlignedText textStyle='normal'>
           <MyLink to='/archive'>Archive</MyLink>
         </TopAlignedText>
@@ -46,11 +46,13 @@ function NavBar(props) {
 
 function ArchiveButton(props) {
   return (
-    <VStack>
+    <VStack spacing={0}>
       <MyLink width='100%' to={'/archive/' + props.name} textStyle='normal'>
         <Image width='100%' src={'/images/' + props.name + '/' + props.coverImage} alt={props.name + '-cover'}/>
       </MyLink>
-      <MyLink to={'/archive/' + props.name} textStyle='normal'>{props.title}</MyLink>
+      <Box height='32px' my='auto'>
+        <MyLink to={'/archive/' + props.name} textStyle='normal'>{props.title}</MyLink>
+      </Box>
     </VStack>
   );
 }
