@@ -23,7 +23,7 @@ const theme = extendTheme({
     normal: {
       fontFamily: 'MonumentGrotesk',
       fontWeight: 'bold',
-      fontSize: '16px' //{base: '1em', md: '1.25vw'}
+      fontSize: {base: '16px', sm: '16px'}
     },
     /*big: {
       fontFamily: 'MonumentGrotesk',

@@ -18,7 +18,7 @@ const projects = [
 ];
 
 function Archive() {
-  const [isMd, isLg] = useMediaQuery(['(min-width: 48em)', '(min-width: 62em)']);
+  const [isMd, isLg] = useMediaQuery(['(min-width: 30em)', '(min-width: 62em)']);
 
   const n_columns = isLg ? 3 : (isMd ? 2 : 1);
   //const n_columns = useBreakpointValue({ base: 1, md: 2, lg: 3 });
@@ -44,7 +44,7 @@ function Archive() {
   }
   return (
     <BasePage title='Archive'>
-      <HStack m='16px' spacing='16px' alignItems='top'>
+      <HStack m={{base: '0', sm: '16px'}} spacing='16px' alignItems='top'>
         {columns}
       </HStack>
     </BasePage>
