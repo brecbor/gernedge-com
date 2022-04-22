@@ -21,27 +21,52 @@ function BasePage(props) {
   );
 }
 
-function NavBar(props) {
-  return (
-    <Flex height='48px' position='fixed' top='0' left='0' right='0' color={props.color}>
-      <Box m='16px'>
-        <TopAlignedText textStyle='normal'>
-          <MyLink to='/'>GERNEDGE</MyLink>
-        </TopAlignedText>
-      </Box>
-      <Spacer />
-      <Box m='16px'>
-      <HStack spacing='32px'>
-        <TopAlignedText textStyle='normal'>
-          <MyLink to='/archive'>Archive</MyLink>
-        </TopAlignedText>
-        <TopAlignedText textStyle='normal'>
-          <MyLink to='/info'>Info</MyLink>
-        </TopAlignedText>
-      </HStack>
-      </Box>
-    </Flex>
-  );
+class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {scrolledTop: true, scrolledBottom: false};
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenToScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.listenToScroll)
+  }
+
+  listenToScroll = () => {
+    const scrolledTop = document.documentElement.scrollTop < 1;
+    this.setState({
+      scrolledTop: scrolledTop,
+      scrolledBottom: Math.abs(document.documentElement.scrollHeight - document.documentElement.clientHeight
+                                - document.documentElement.scrollTop) < 1,
+    });
+  };
+
+  render() {
+    return (
+      <Flex height='48px' position='fixed' top='0' left='0' right='0' color={this.props.color}
+            visibility={this.state.scrolledTop || this.state.scrolledBottom ? 'visible' : 'hidden'}>
+        <Box m='16px'>
+          <TopAlignedText textStyle='normal'>
+            <MyLink to='/'>GERNEDGE</MyLink>
+          </TopAlignedText>
+        </Box>
+        <Spacer />
+        <Box m='16px'>
+          <HStack spacing='32px'>
+            <TopAlignedText textStyle='normal'>
+              <MyLink to='/archive'>Archive</MyLink>
+            </TopAlignedText>
+            <TopAlignedText textStyle='normal'>
+              <MyLink to='/info'>Info</MyLink>
+            </TopAlignedText>
+          </HStack>
+        </Box>
+      </Flex>
+    );
+  }
 }
 
 function ArchiveButton(props) {
