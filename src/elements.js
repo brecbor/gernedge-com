@@ -112,7 +112,10 @@ function TopAlignedText(props) {
 
 function MyLink(props) {
   return (
-    <Link as={RouterLink} textStyle={props.textStyle} to={props.to} _hover={{textDecoration: 'none', color: props.hoverColor}}>
+    <Link as={RouterLink} textStyle={props.textStyle} to={props.to}
+          _hover={{textDecoration: 'none', color: props.hoverColor}}
+          _active={{textDecoration: 'none'}}
+          _focus={{textDecoration: 'none'}}>
       {props.children}
     </Link>
   );
@@ -120,7 +123,10 @@ function MyLink(props) {
 
 function MyExternalLink(props) {
   return (
-    <Link textStyle={props.textStyle} color={props.color} href={props.href} isExternal _hover={{textDecoration: 'none', color: props.hoverColor}}>
+    <Link textStyle={props.textStyle} color={props.color} href={props.href} isExternal
+          _hover={{textDecoration: 'none', color: props.hoverColor}}
+          _active={{textDecoration: 'none'}}
+          _focus={{textDecoration: 'none'}}>
       {props.children}
     </Link>
   );
