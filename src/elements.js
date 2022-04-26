@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Flex, Image, Link, Spacer, Text, VStack, HStack } from '@chakra-ui/react';
+import { Box, ChakraProvider, Flex, Image, Link, Spacer, Text, VStack, HStack, Button } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import React from 'react';
 import Font from './custom_font';
@@ -7,18 +7,38 @@ import { ScrollToTop } from './ScrollToTop';
 
 
 function BasePage(props) {
-  return (
-    <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100vh' color='black'>
-      <ScrollToTop />
-      <NavBar/>
-      <Box height='50vh'/>
-      {props.children}
-      <Box height='100vh'/>
-      <Box p='16px' textStyle='normal' textAlign='left'>
-        {props.title}
+  if(props.noScroll) {
+    return (
+      <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' height='100vh'
+           color='black'>
+        <ScrollToTop/>
+        <NavBar/>
+        <Box height='100%'>
+          {props.children}
+        </Box>
+        <Flex position='fixed' bottom='0' left='0' right='0'>
+          <Box p='16px' textStyle='normal' textAlign='left'>
+            {props.title}
+          </Box>
+        </Flex>
       </Box>
-    </Box>
-  );
+    );
+  }
+  else {
+    return (
+      <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100vh'
+           color='black'>
+        <ScrollToTop/>
+        <NavBar/>
+        <Box height='50vh'/>
+        {props.children}
+        <Box height='100vh'/>
+        <Box p='16px' textStyle='normal' textAlign='left'>
+          {props.title}
+        </Box>
+      </Box>
+    );
+  }
 }
 
 class NavBar extends React.Component {

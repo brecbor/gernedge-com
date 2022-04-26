@@ -10,13 +10,19 @@ import {ScrollToTop} from './ScrollToTop';
 import {BasePage, NavBar, ArchiveButton} from './elements';
 import Archive from './Archive';
 import Project_45_14 from './Project_45_14';
+import Gallery from './Gallery';
 
 
 const content = {
   'units': {
     'title': 'Units, 2021',
+    'noScroll': true,
     'content': (
-      <Image width='50vw' src='/images/tmp.jpg' alt='jernej'/>
+      <Gallery images={['/images/units/01.jpg',
+                        '/images/units/02.jpg',
+                        '/images/units/03.jpg',
+                        '/images/units/04.jpg',
+                        '/images/units/05.jpg']}/>
     )
   },
   '45_14': {
@@ -61,7 +67,7 @@ function ProjectPage() {
   console.log('Document body scroll width:  ' + document.body.scrollWidth);
 
   return (
-    <BasePage title={content[id].title} bgColor={content[id].bgColor}>
+    <BasePage title={content[id].title} bgColor={content[id].bgColor} noScroll={content[id].noScroll}>
       {content[id].content}
     </BasePage>
   );

@@ -9,7 +9,7 @@ import {ScrollToTop} from './ScrollToTop';
 import {BasePage, NavBar, ArchiveButton} from './elements';
 
 const projects = [
-  {name: 'units', title: 'UNITS', coverImage:'3.jpg'},
+  {name: 'units', title: 'UNITS', coverImage:'03.jpg'},
   {name: '45_14', title: '45.588620, 14.447503', coverImage:'1.jpg'},
   {name: 'memory_induced', title: 'MEMORY INDUCED', coverImage:'1.jpg'},
   {name: 'field_recording', title: 'FR_200607', coverImage:'1.jpg'},
