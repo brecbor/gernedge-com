@@ -57,10 +57,10 @@ const content = {
     )
   },
   'send_nudes': {
-    'title': 'Send Nudes, 2021',
+    'title': 'Send Nudes, 2019',
     'noScroll': true,
     'content': (
-      <Gallery images={[
+      <Gallery imageBorder={true} images={[
         '/images/send_nudes/01.jpg',
         '/images/send_nudes/02.jpg',
         '/images/send_nudes/03.jpg'
