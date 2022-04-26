@@ -18,11 +18,13 @@ const content = {
     'title': 'Units, 2021',
     'noScroll': true,
     'content': (
-      <Gallery images={['/images/units/01.jpg',
-                        '/images/units/02.jpg',
-                        '/images/units/03.jpg',
-                        '/images/units/04.jpg',
-                        '/images/units/05.jpg']}/>
+      <Gallery images={[
+        '/images/units/01.jpg',
+        '/images/units/02.jpg',
+        '/images/units/03.jpg',
+        '/images/units/04.jpg',
+        '/images/units/05.jpg'
+      ]}/>
     )
   },
   '45_14': {
@@ -52,6 +54,17 @@ const content = {
                 allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
         <script src="https://player.vimeo.com/api/player.js"></script>
       </Box>
+    )
+  },
+  'send_nudes': {
+    'title': 'Send Nudes, 2021',
+    'noScroll': true,
+    'content': (
+      <Gallery images={[
+        '/images/send_nudes/01.jpg',
+        '/images/send_nudes/02.jpg',
+        '/images/send_nudes/03.jpg'
+      ]}/>
     )
   },
 };

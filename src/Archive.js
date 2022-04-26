@@ -14,7 +14,7 @@ const projects = [
   {name: 'memory_induced', title: 'MEMORY INDUCED', coverImage:'1.jpg'},
   {name: 'field_recording', title: 'FR_200607', coverImage:'1.jpg'},
   null,
-  {name: 'send_nudes', title: 'SEND NUDES', coverImage:'02.jpg'},
+  {name: 'send_nudes', title: 'SEND NUDES', coverImage:'Naslovna.jpg'},
 ];
 
 function Archive() {
