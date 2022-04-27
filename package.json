@@ -1,5 +1,6 @@
 {
   "name": "gernedge-com",
+  "homepage": "https://gernedge.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
