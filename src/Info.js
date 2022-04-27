@@ -14,16 +14,11 @@ function Info() {
       <VStack spacing='64px' pl='16px' textAlign='justify' color='black' width='50vw'>
         {/*lineHeight='2.5vw'*/}
         <VStack spacing='32px' alignItems='left'>
-          <Text lineHeight='32px' textStyle='normal'>Jernej Šimec (1997) — an inquisitive visual artist using light as a tool for exploring the common
-            ground between photography and humanity, thus reinterpreting the notion of existence and challenging our
-            perceptions of nature. During his studies, he completed a full year at the Academy of Fine Arts in Warsaw
-            where he also attended a 5-month workshop Art Made by Walking, which influenced his work by blurring the
-            line between life and art. Since 2021 he is contributing photos
-            to <MyExternalLink hoverColor='#6cffd7' href='https://postplaneta.com/'>POST_PLANETA</MyExternalLink>
-            . He is available for
-            commissioned work all around the world.</Text>
-          <Text lineHeight='32px' textStyle='normal'>For inquiries on prints, collaborations or commissioned work please contact me
-            on <MyExternalLink hoverColor='#6cffd7' href='mailto:jernej.simec@gmail.com'>e-mail</MyExternalLink> or <MyExternalLink hoverColor='#6cffd7' href='https://www.instagram.com/jernejsimec/'>Instagram</MyExternalLink>.
+          <Text lineHeight='32px' textStyle='normal'>
+            Jernej Šimec is an inquisitive photographer and visual artist from Slovenia. He holds a degree from <MyExternalLink hoverColor='#6cffd7' href='https://www.aluo.uni-lj.si/'>ALUO</MyExternalLink> in Ljubljana [SI] with a year on <MyExternalLink hoverColor='#6cffd7' href='https://asp.waw.pl/'>Akademia Sztuk Pięknych</MyExternalLink> in Warsaw [PL]. Since 2021 he has been collaborating with Kamila Walendykiewicz on <MyExternalLink hoverColor='#6cffd7' href='https://postplaneta.com/'>Post_Planeta</MyExternalLink>. He is available for commissioned work all around the world.
+          </Text>
+          <Text lineHeight='32px' textStyle='normal'>
+            Get in touch via <MyExternalLink hoverColor='#6cffd7' href='mailto:jernej.simec@gmail.com'>e-mail</MyExternalLink> or <MyExternalLink hoverColor='#6cffd7' href='https://www.instagram.com/jernejsimec/'>Instagram</MyExternalLink>.
           </Text>
         </VStack>
         <Box width='100%'>
