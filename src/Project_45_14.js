@@ -79,13 +79,15 @@ function Project_45_14() {
       <Box width='100%' pr='50vw'>
         <Image mt='64px' float='right' pl='16px' width='33vw' src='/images/45_14/12.jpg' alt='45_14/1'/>
       </Box>
-      <Box pl='16px' pt={text_pt} width='100%' pr={'40vw'/*TODO*/} textAlign='justify' textStyle='normal'>
-        <Text>
-          &emsp;With my retreats to nature I am developing a method of deepening our connectedness with it. I take the concept of the dérive as a basis of my work, which theorist and philosopher Guy Debord describes as aimless, random drifting through a place, guided by whim and an awareness of how different spaces draw you in or repel you. The work can be read very concretely, tied to a particular moment and place. When in nature, I make my way through and, inevitably, I also leave a trace.
-        </Text>
-        <Text textStyle='normal'>
-          &emsp;Through this productive experience, the thought becomes embodied in a medium that has its limitations but is, nevertheless, prolonged by it. I would see the same things with or without the camera. I would experience the same things with or without the camera. But it is my desire to experience profoundly and through the mediation of the camera to think photographically. In this sense, the series is a dialogue between transience and eternity. The view of the sky might be one of the few shared visions we still have with our ancestors and is therefore eternal. But the land, the trees... they are in constant change. Without memory and without future – just silence.
-        </Text>
+      <Box width='100%' alignItems='left'>
+        <Box pl='16px' pt={text_pt} width={{base: '100vw', sm: '50vw'}} pr={{base: '16px', sm: 0}} float='left' textAlign='justify' textStyle='normal'>
+          <Text lineHeight='32px'>
+            &emsp;With my retreats to nature I am developing a method of deepening our connectedness with it. I take the concept of the dérive as a basis of my work, which theorist and philosopher Guy Debord describes as aimless, random drifting through a place, guided by whim and an awareness of how different spaces draw you in or repel you. The work can be read very concretely, tied to a particular moment and place. When in nature, I make my way through and, inevitably, I also leave a trace.
+          </Text>
+          <Text textStyle='normal' lineHeight='32px'>
+            &emsp;Through this productive experience, the thought becomes embodied in a medium that has its limitations but is, nevertheless, prolonged by it. I would see the same things with or without the camera. I would experience the same things with or without the camera. But it is my desire to experience profoundly and through the mediation of the camera to think photographically. In this sense, the series is a dialogue between transience and eternity. The view of the sky might be one of the few shared visions we still have with our ancestors and is therefore eternal. But the land, the trees... they are in constant change. Without memory and without future – just silence.
+          </Text>
+        </Box>
       </Box>
     </VStack>
   );

@@ -95,7 +95,7 @@ function ArchiveButton(props) {
       <MyLink width='100%' to={'/archive/' + props.name} textStyle='normal'>
         <Image width='100%' src={'/images/' + props.name + '/' + props.coverImage} alt={props.name + '-cover'}/>
       </MyLink>
-      <Box height='48px'>
+      <Box>
         <MyLink to={'/archive/' + props.name} textStyle='normal'>{props.title}</MyLink>
       </Box>
     </VStack>

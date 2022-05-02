@@ -11,11 +11,11 @@ import { BasePage, NavBar, ArchiveButton, TopAlignedText, MyExternalLink } from 
 function Info() {
   return (
     <BasePage title='Info'>
-      <VStack spacing='64px' pl='16px' textAlign='justify' color='black' width='50vw'>
+      <VStack spacing='64px' pl='16px' pr={{base: '16px', sm: 0}} textAlign='justify' color='black' width={{base: '100vw', sm: '50vw'}}>
         {/*lineHeight='2.5vw'*/}
         <VStack spacing='32px' alignItems='left'>
           <Text lineHeight='32px' textStyle='normal'>
-            Jernej Šimec is an inquisitive photographer and visual artist from Slovenia. He holds a degree from <MyExternalLink hoverColor='#6cffd7' href='https://www.aluo.uni-lj.si/'>ALUO</MyExternalLink> in Ljubljana [SI] with a year on <MyExternalLink hoverColor='#6cffd7' href='https://asp.waw.pl/'>Akademia Sztuk Pięknych</MyExternalLink> in Warsaw [PL]. Since 2021 he has been collaborating with Kamila Walendykiewicz on <MyExternalLink hoverColor='#6cffd7' href='https://postplaneta.com/'>Post_Planeta</MyExternalLink>. He is available for commissioned work all around the world.
+            Jernej Šimec is an inquisitive photographer and visual artist from Slovenia. He holds a degree from <MyExternalLink hoverColor='#6cffd7' href='https://www.aluo.uni-lj.si/'>ALUO</MyExternalLink> in Ljubljana [SI] with a year on <MyExternalLink hoverColor='#6cffd7' href='https://asp.waw.pl/'>Akademia Sztuk Pięknych</MyExternalLink> in Warsaw [PL]. Since 2021 he has been collaborating with Kamila Walendykiewicz on <MyExternalLink hoverColor='#6cffd7' href='https://postplaneta.com/'>POST_PLANETA</MyExternalLink>. He is available for commissioned work all around the world.
           </Text>
           <Text lineHeight='32px' textStyle='normal'>
             Get in touch via <MyExternalLink hoverColor='#6cffd7' href='mailto:jernej.simec@gmail.com'>e-mail</MyExternalLink> or <MyExternalLink hoverColor='#6cffd7' href='https://www.instagram.com/jernejsimec/'>Instagram</MyExternalLink>.
