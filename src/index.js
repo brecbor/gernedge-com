@@ -22,10 +22,10 @@ ReactDOM.render(
       <Font />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/archive" element={<Archive />} />
-          <Route path="/archive/:id" element={<ProjectPage />} />
+          <Route path="/" element={<App/>} />
+          <Route path="/info" element={<Info webTitle='Info'/>} />
+          <Route path="/archive" element={<Archive webTitle='Archive'/>} />
+          <Route path="/archive/:id" element={<ProjectPage/>} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

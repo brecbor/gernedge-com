@@ -19,7 +19,7 @@ const projects = [
 // for each number of columns it describes for each project to which column it goes
 const column_indices = [null, [0, 0, 0, 0, 0], [0, 1, 0, 1, 0], [0, 1, 2, 0, 2]];
 
-function Archive() {
+function Archive(props) {
   const [isMd, isLg] = useMediaQuery(['(min-width: 30em)', '(min-width: 62em)']);
 
   const n_columns = isLg ? 3 : (isMd ? 2 : 1);
@@ -43,7 +43,7 @@ function Archive() {
     );
   }
   return (
-    <BasePage title='Archive'>
+    <BasePage title='Archive' webTitle={props.webTitle}>
       <HStack m={{base: '0', sm: '16px'}} spacing='16px' alignItems='top'>
         {columns}
       </HStack>

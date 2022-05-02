@@ -8,9 +8,9 @@ import { Link as RouterLink } from 'react-router-dom';
 import {ScrollToTop} from './ScrollToTop';
 import { BasePage, NavBar, ArchiveButton, TopAlignedText, MyExternalLink } from './elements';
 
-function Info() {
+function Info(props) {
   return (
-    <BasePage title='Info'>
+    <BasePage title='Info' webTitle={props.webTitle}>
       <VStack spacing='64px' pl='16px' pr={{base: '16px', sm: 0}} textAlign='justify' color='black' width={{base: '100vw', sm: '50vw'}}>
         {/*lineHeight='2.5vw'*/}
         <VStack spacing='32px' alignItems='left'>

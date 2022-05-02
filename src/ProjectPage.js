@@ -16,6 +16,7 @@ import Gallery from './Gallery';
 const content = {
   'units': {
     'title': 'Units, 2021',
+    'webTitle': 'UNITS',
     'noScroll': true,
     'content': (
       <Gallery images={[
@@ -29,6 +30,7 @@ const content = {
   },
   '45_14': {
     'title': '45.588620, 14.447503, 2021',
+    'webTitle': '45.588620, 14.447503',
     'content': (
       <Project_45_14/>
     )
@@ -36,6 +38,7 @@ const content = {
   'field_recording': {
     'bgColor': 'white',
     'title': 'FR_200607, 2020',
+    'webTitle': 'FR_200607',
     'content': (
       <Box width='100%' position='relative' p='56.25% 0 0 0'>
         <iframe src="https://player.vimeo.com/video/655024508?h=e226ff68bd&autoplay=1&title=0&byline=0&portrait=0"
@@ -47,6 +50,7 @@ const content = {
   },
   'memory_induced': {
     'title': 'Memory Induced, colour video and sound, 2020',
+    'webTitle': 'MEMORY INDUCED',
     'content': (
       <Box mx='auto' mt={'0'/*'31.25vw'*/} width='50%' position='relative' p='37.5% 0 0 0'>
         <iframe src="https://player.vimeo.com/video/600951447?h=1939fc6cc1&autoplay=1&title=0&byline=0&portrait=0"
@@ -58,6 +62,7 @@ const content = {
   },
   'send_nudes': {
     'title': 'Send Nudes, 2019',
+    'webTitle': 'SEND NUDES',
     'noScroll': true,
     'content': (
       <Gallery imageBorder={true} images={[
@@ -80,7 +85,7 @@ function ProjectPage() {
   console.log('Document body scroll width:  ' + document.body.scrollWidth);
 
   return (
-    <BasePage title={content[id].title} bgColor={content[id].bgColor} noScroll={content[id].noScroll}>
+    <BasePage title={content[id].title} webTitle={content[id].webTitle} bgColor={content[id].bgColor} noScroll={content[id].noScroll}>
       {content[id].content}
     </BasePage>
   );
