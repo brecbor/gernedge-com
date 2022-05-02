@@ -16,11 +16,12 @@ class Gallery extends React.Component {
   }
 
   render() {
+    const img_width = Math.min(0.75*document.documentElement.clientHeight*1.5, 0.67*document.documentElement.clientWidth);
     return (
       <Flex align='center' justify='center' height='100%'>
         <HStack spacing={'32px'/* TODO */}>
           <MyButton onClick={() => this.handleClick(-1)}>&larr;</MyButton>
-          <Image maxWidth='67vw' maxHeight='75vh' src={this.props.images[this.state.index]} alt='jernej'
+          <Image width={img_width} src={this.props.images[this.state.index]} alt='jernej'
                  p={this.props.imageBorder ? '0.5%' : 0} bgColor='white'/>
           <MyButton onClick={() => this.handleClick(1)}>&rarr;</MyButton>
         </HStack>
