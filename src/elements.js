@@ -8,7 +8,7 @@ import { ScrollToTop } from './ScrollToTop';
 
 function BasePage(props) {
   useEffect(() => {
-    document.title = props.webTitle ? 'Gernedege | ' + props.webTitle : 'Gernedge';
+    document.title = props.webTitle ? 'Gernedge | ' + props.webTitle : 'Gernedge';
   }, [props.webTitle]);
 
   if(props.noScroll) {

@@ -8,7 +8,11 @@ import { Logo } from './Logo';
 import {ScrollToTop} from './ScrollToTop';
 import {BasePage, NavBar, ArchiveButton} from './elements';
 
-function App() {
+function App(props) {
+  useEffect(() => {
+    document.title = props.webTitle ? 'Gernedge | ' + props.webTitle : 'Gernedge';
+  }, [props.webTitle]);
+
   return (
     <Box position='relative' width='100vw' height='100vh' overflow='hidden' color='rgb(204, 204, 204)'>
       <ScrollToTop />
