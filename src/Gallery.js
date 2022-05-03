@@ -1,4 +1,16 @@
-import { Grid, GridItem, Image, VStack, HStack, Box, useDimensions, Flex, Button } from '@chakra-ui/react';
+import {
+  Grid,
+  GridItem,
+  Image,
+  VStack,
+  HStack,
+  Box,
+  useDimensions,
+  Flex,
+  Button,
+  Text,
+  useMediaQuery,
+} from '@chakra-ui/react';
 import React from 'react';
 
 
@@ -16,6 +28,23 @@ class Gallery extends React.Component {
   }
 
   render() {
+    /* TODO
+    if(this.props.phone) {
+      return (
+        <Box width={'100%'} height={'100%'} bgColor='red'>
+          <Text>
+            {'Window height: ' + window.screen.height +
+            'Window width:  ' + window.screen.width +
+            'Viewport height: ' + window.innerHeight +
+            'Viewport width:  ' + window.innerWidth +
+            'Document body client height: ' + document.body.clientHeight +
+            'Document body client width: ' + document.body.clientWidth +
+            'Document body scroll height:  ' + document.body.scrollHeight +
+            'Document body scroll width:  ' + document.body.scrollWidth}
+          </Text></Box>
+      );
+    }*/
+
     const img_width = Math.min(0.75*document.documentElement.clientHeight*1.5, 0.67*document.documentElement.clientWidth);
     return (
       <Flex align='center' justify='center' height='100%'>

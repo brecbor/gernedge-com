@@ -27,11 +27,33 @@ function BasePage(props) {
   const [normal] = useMediaQuery(['(min-width: 30em)']);
 
   if(!normal) {
+
+    const title = (<Flex position='fixed' top='0' left='0' right='0'>
+      <Box p='16px' textStyle='normal' textAlign='left'>
+        {props.title}
+      </Box>
+    </Flex>);
+
     return (
-      <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100vh'
+      <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100%'
            color='black'>
-        <ScrollToTop/>
+        {props.title==='Info' ? null : title}
+        <Box width='100%' height='100vh' m='auto'>
         {props.children}
+        </Box>
+        <Flex height='48px' position='fixed' bottom='0' left='0' right='0' >
+          <Box m='16px'>
+            <TopAlignedText textStyle='normal'>
+              <MyLink to='/'>Index</MyLink>
+            </TopAlignedText>
+          </Box>
+          <Spacer />
+          <Box m='16px'>
+            <TopAlignedText textStyle='normal'>
+              <MyLink to='/info'>&rarr;</MyLink>
+            </TopAlignedText>
+          </Box>
+        </Flex>
       </Box>
     );
   }
