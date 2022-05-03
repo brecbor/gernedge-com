@@ -18,6 +18,15 @@ import theme from './custom_theme';
 import { ScrollToTop } from './ScrollToTop';
 import Archive from './Archive';
 
+const next_project = {
+  'Units, 2021': '/archive/45_14',
+  '45.588620, 14.447503, 2021': '/archive/memory_induced',
+  'Memory Induced, 2020': '/archive/field_recording',
+  'Memory Induced, colour video and sound, 2020': '/archive/field_recording',
+  'FR_200607, 2020': '/archive/send_nudes',
+  'Send Nudes, 2019': '/info',
+  'Info': '/archive/units',
+};
 
 function BasePage(props) {
   useEffect(() => {
@@ -50,7 +59,7 @@ function BasePage(props) {
           <Spacer />
           <Box m='16px'>
             <TopAlignedText textStyle='normal'>
-              <MyLink to='/info'>&rarr;</MyLink>
+              <MyLink to={next_project[props.title]}>&rarr;</MyLink>
             </TopAlignedText>
           </Box>
         </Flex>
