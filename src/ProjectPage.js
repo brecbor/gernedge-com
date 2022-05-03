@@ -27,6 +27,7 @@ import {BasePage, NavBar, ArchiveButton} from './elements';
 import Archive from './Archive';
 import Project_45_14 from './Project_45_14';
 import Gallery from './Gallery';
+import MobileGallery from './MobileGallery';
 
 
 const content = {
@@ -44,7 +45,7 @@ const content = {
       ]}/>
     ),
     'phoneContent': (
-      <Gallery phone={true} images={[
+      <MobileGallery images={[
         '/images/units/01.jpg',
         '/images/units/02.jpg',
         '/images/units/03.jpg',
@@ -116,7 +117,7 @@ const content = {
       ]}/>
     ),
     'phoneContent': (
-      <Gallery phone={true} imageBorder={true} images={[
+      <MobileGallery imageBorder={true} images={[
         '/images/send_nudes/01.jpg',
         '/images/send_nudes/02.jpg',
         '/images/send_nudes/03.jpg'
