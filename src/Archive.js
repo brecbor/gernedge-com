@@ -6,13 +6,13 @@ import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import { Link as RouterLink } from 'react-router-dom';
 import {ScrollToTop} from './ScrollToTop';
-import {BasePage, NavBar, ArchiveButton} from './elements';
+import { BasePage, NavBar, ArchiveButton, MyLink } from './elements';
 
 const projects = [
   {name: 'units', title: 'UNITS', coverImage:'03.jpg'},
   {name: '45_14', title: '45.588620, 14.447503', coverImage:'1.jpg'},
   {name: 'memory_induced', title: 'MEMORY INDUCED', coverImage:'1.jpg'},
-  {name: 'field_recording', title: 'FR_200607', coverImage:'1.jpg'},
+  {name: 'field_recording', title: 'FR_200607', coverImage:'1.jpg', phoneCoverImage: 'naslovna-fon.jpg'},
   {name: 'send_nudes', title: 'SEND NUDES', coverImage:'Naslovna.jpg'},
 ];
 
@@ -20,9 +20,33 @@ const projects = [
 const column_indices = [null, [0, 0, 0, 0, 0], [0, 1, 0, 1, 0], [0, 1, 2, 0, 2]];
 
 function Archive(props) {
-  const [isMd, isLg] = useMediaQuery(['(min-width: 30em)', '(min-width: 62em)']);
+  const [normal, isLg] = useMediaQuery(['(min-width: 30em)', '(min-width: 62em)']);
 
-  const n_columns = isLg ? 3 : (isMd ? 2 : 1);
+  const n_columns = isLg ? 3 : (normal ? 2 : 1);
+
+  if(!normal) {
+    let archive_buttons = [];
+    for(let i=0; i<projects.length; i++) {
+      archive_buttons.push(
+        <MyLink width='100%' to={'/archive/' + projects[i].name} textStyle='normal'>
+          <Image width='100%'
+                 src={'/images/' + projects[i].name + '/' + (projects[i].phoneCoverImage ? projects[i].phoneCoverImage : projects[i].coverImage)}
+                 alt={projects[i].name + '-cover'}/>
+        </MyLink>
+      );
+    }
+    archive_buttons.push(
+      <MyLink width='100%' to='/info' textStyle='normal'>
+        <Image width='100%' src='/images/info-fon.jpg' alt='info-cover'/>
+      </MyLink>
+    );
+
+    return (
+      <VStack w='100%' spacing='0'>
+        {archive_buttons}
+      </VStack>
+    );
+  }
 
   let archive_buttons = [];
   for(let i=0; i<n_columns; i++) {

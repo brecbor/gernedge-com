@@ -1,15 +1,40 @@
-import { Box, ChakraProvider, Flex, Image, Link, Spacer, Text, VStack, HStack, Button } from '@chakra-ui/react';
+import {
+  Box,
+  ChakraProvider,
+  Flex,
+  Image,
+  Link,
+  Spacer,
+  Text,
+  VStack,
+  HStack,
+  Button,
+  useMediaQuery,
+} from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import Font from './custom_font';
 import theme from './custom_theme';
 import { ScrollToTop } from './ScrollToTop';
+import Archive from './Archive';
 
 
 function BasePage(props) {
   useEffect(() => {
     document.title = props.webTitle ? 'Gernedge | ' + props.webTitle : 'Gernedge';
   }, [props.webTitle]);
+
+  const [normal] = useMediaQuery(['(min-width: 30em)']);
+
+  if(!normal) {
+    return (
+      <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100vh'
+           color='black'>
+        <ScrollToTop/>
+        {props.children}
+      </Box>
+    );
+  }
 
   if(props.noScroll) {
     return (
