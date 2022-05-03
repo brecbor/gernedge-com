@@ -1,4 +1,4 @@
-import { Grid, GridItem, Image, VStack, HStack, Box, useDimensions, Text } from '@chakra-ui/react';
+import { Grid, GridItem, Image, VStack, HStack, Box, useDimensions, Text, useMediaQuery } from '@chakra-ui/react';
 import React from 'react';
 import { TopAlignedText } from './elements';
 
@@ -16,6 +16,26 @@ function Project_45_14() {
   console.log('img: ' + img2_height);
   console.log('img: ' + img3_pt);
   console.log('img: ' + img3_height);*/
+
+  const [normal] = useMediaQuery(['(min-width: 30em)']);
+
+  if(!normal) {
+    let images = [];
+    for(let i=1; i<12; i++) {
+      let name = '/images/45_14/'+i+'.jpg';
+      if(i === 6) {
+        name = '/images/45_14/'+i+'.png'
+      }
+      images.push(
+        <Image width='100%' src={name} alt='45_14/1'/>
+      );
+    }
+    return (
+      <Box width='100%'>
+        {images}
+      </Box>
+    );
+  }
 
   const image1Ref = React.useRef();
   const image1Dim = useDimensions(image1Ref, true);

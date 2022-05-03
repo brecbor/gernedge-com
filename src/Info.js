@@ -12,7 +12,7 @@ function Info(props) {
   return (
     <BasePage title='Info' webTitle={props.webTitle}>
       <VStack spacing={{base: '48px', sm: '64px'}} pl='16px' pr={{base: '16px', sm: 0}} textAlign='justify'
-              color='black' width={{base: '100vw', sm: '50vw'}} pt='32px'>
+              color='black' width={{base: '100vw', sm: '50vw'}} pt={{base: '32px', sm: 0}}>
         {/*lineHeight='2.5vw'*/}
         <VStack spacing={{base: '24px', sm: '32px'}} alignItems='left'>
           <Text lineHeight={{base: '24px', sm: '32px'}} textStyle='normal'>
