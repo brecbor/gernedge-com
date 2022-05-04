@@ -95,14 +95,12 @@ const content = {
       </Box>
     ),
     'phoneContent': (
-      <Box width='100%' height='100%' px='16px'>
       <Center width='100%' height='100%'>
-        {/*<Box mt={'0'/*'31.25vw'*/} width='100%' position='relative' p='37.5% 0 0 0'>*/}
+        {/*<Box mt={'0'/*'31.25vw'* /} width='100%' position='relative' p='37.5% 0 0 0'>*/}
         <iframe src="https://player.vimeo.com/video/600951447?h=1939fc6cc1&autoplay=1&title=0&byline=0&portrait=0"
                 style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0}} frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
       </Center>
-      </Box>
     )
   },
   'send_nudes': {

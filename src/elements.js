@@ -10,6 +10,7 @@ import {
   HStack,
   Button,
   useMediaQuery,
+  Center
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import React, { useEffect } from 'react';
@@ -47,9 +48,15 @@ function BasePage(props) {
       <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100%'
            color='black'>
         {props.title==='Info' ? null : title}
-        <Box width='100%' height='100vh' m='auto'>
-        {props.children}
-        </Box>
+        {props.title==='Info' ? (
+          <Box width='100%' minHeight='100vh'>
+            {props.children}
+          </Box>
+          ) : (
+          <Center width='100%' minHeight='100vh'>
+            {props.children}
+          </Center>
+        )}
         <Flex height='48px' position='fixed' bottom='0' left='0' right='0' >
           <Box m='16px'>
             <TopAlignedText textStyle='normal'>
