@@ -23,34 +23,34 @@ function Archive(props) {
   const [normal, isLg] = useMediaQuery(['(min-width: 30em)', '(min-width: 62em)']);
 
   const n_columns = isLg ? 3 : (normal ? 2 : 1);
-  let archive_buttons = [];
+  let phone_archive_buttons = [];
 
   if(!normal) {
     for(let i=0; i<projects.length; i++) {
-      archive_buttons.push(
+      phone_archive_buttons.push(
         <MyLink width='100%' to={'/archive/' + projects[i].name} textStyle='normal'>
           <Image width='100%'
                  src={'/images/' + projects[i].name + '/' + (projects[i].phoneCoverImage ? projects[i].phoneCoverImage : projects[i].coverImage)}
                  alt={projects[i].name + '-cover'}/>
         </MyLink>
       );
-      if(archive_buttons.length > 20) alert('archive_buttons1');
+      //if(phone_archive_buttons.length > 20) alert('archive_buttons1');
     }
-    archive_buttons.push(
+    phone_archive_buttons.push(
       <MyLink width='100%' to='/info' textStyle='normal'>
         <Image width='100%' src='/images/info-fon.jpg' alt='info-cover'/>
       </MyLink>
     );
-    if(archive_buttons.length > 20) alert('archive_buttons1');
+    //if(phone_archive_buttons.length > 20) alert('archive_buttons1');
 
     return (
       <VStack w='100%' spacing='0'>
-        {archive_buttons}
+        {phone_archive_buttons}
       </VStack>
     );
   }
 
-  //let archive_buttons = [];
+  let archive_buttons = [];
   if(archive_buttons.length > 0) alert('archive_buttons0');
   for(let i=0; i<n_columns; i++) {
     archive_buttons.push([]);
@@ -73,7 +73,7 @@ function Archive(props) {
     if(columns.length > 20) alert('archive columns');
   }
   return (
-    <BasePage title='Archive' webTitle={props.webTitle}>
+    <BasePage title='Archive' webTitle={props.webTitle} noPhone={true}>
       <HStack m={{base: '0', sm: '16px'}} spacing='16px' alignItems='top'>
         {columns}
       </HStack>

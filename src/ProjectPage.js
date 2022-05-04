@@ -59,7 +59,10 @@ const content = {
     'title': '45.588620, 14.447503, 2021',
     'webTitle': '45.588620, 14.447503',
     'content': (
-      <Project_45_14/>
+      <Project_45_14 phone={false}/>
+    ),
+    'phoneContent': (
+      <Project_45_14 phone={true}/>
     )
   },
   'field_recording': {
@@ -134,7 +137,8 @@ function ProjectPage() {
     <BasePage title={!normal && content[id].phoneTitle ? content[id].phoneTitle : content[id].title}
               webTitle={content[id].webTitle}
               bgColor={content[id].bgColor}
-              noScroll={content[id].noScroll}>
+              noScroll={content[id].noScroll}
+              /*noPhone={normal}*/>
       {!normal && content[id].phoneContent ? content[id].phoneContent : content[id].content}
     </BasePage>
   );

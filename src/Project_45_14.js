@@ -16,7 +16,7 @@ const phoneImages = [
   '/images/45_14/12.jpg',
 ];
 
-function Project_45_14() {
+function Project_45_14(props) {
   /*const image5Ref = React.useRef();
   const dimensions = useDimensions(image5Ref);
   console.log(dimensions);*/
@@ -30,9 +30,9 @@ function Project_45_14() {
   console.log('img: ' + img3_pt);
   console.log('img: ' + img3_height);*/
 
-  const [normal] = useMediaQuery(['(min-width: 30em)']);
+  //const [normal] = useMediaQuery(['(min-width: 30em)']);
 
-  if(!normal) {
+  if(props.phone) {
     let images = [];
     //alert('tuki - phone images length ' + phoneImages.length);
     for(let i=0; i<phoneImages.length; i++) {

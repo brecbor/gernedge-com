@@ -36,7 +36,7 @@ function BasePage(props) {
 
   const [normal] = useMediaQuery(['(min-width: 30em)']);
 
-  if(!normal) {
+  if(!normal && !props.noPhone) {
     return (
       <Box bgColor={/*props.bgColor ? props.bgColor : */'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100%'
            color='black'>
