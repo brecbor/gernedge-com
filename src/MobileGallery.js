@@ -13,7 +13,9 @@ import {
   Center
 } from '@chakra-ui/react';
 import React from 'react';
-import {useSwipeable} from 'react-swipeable'
+import {useSwipeable} from 'react-swipeable';
+import { IconContext } from "react-icons";
+import { BsCircleFill, BsCircle } from "react-icons/bs";
 
 function MobileGallery(props) {
   const [index, setIndex] = React.useState(0);
@@ -27,16 +29,24 @@ function MobileGallery(props) {
   let empty_dot='○', full_dot='●', dots = [];
   for(let i=0; i<n; i++) {
     if(i == index) {
-      dots.push(<Text pt='2.5px' lineHeight='24px' fontSize='10px'>{full_dot}</Text>);
+      dots.push(
+        <IconContext.Provider value={{ color: "black", size: '8px' }}>
+          <BsCircleFill/>
+        </IconContext.Provider>
+      );//<BsCircleFill w='8px' h='8px'/>);//<Text pt='2.5px' lineHeight='24px' fontSize='10px'>{full_dot}</Text>);
     }
     else {
-      dots.push(<Text lineHeight='24px'  fontSize='16px'>{empty_dot}</Text>);
+      dots.push(
+        <IconContext.Provider value={{ color: "black", size: '8px' }}>
+          <BsCircle/>
+        </IconContext.Provider>
+      );//<BsCircle w='8px' h='8px'/>);//<Text lineHeight='24px'  fontSize='16px'>{empty_dot}</Text>);
     }
   }
 
   return (
     <Center height='100%' {...handlers}>
-      <VStack px='16px' width='100%'>
+      <VStack px='16px' width='100%' spacing='16px'>
         <Image src={props.images[index]} width='100%' p={props.imageBorder ? '0.5%' : 0} bgColor='white'/>
         <HStack>
           {dots/*<Text mt='2px' lineHeight='24px' fontSize='10px'>{full_dot}</Text><Text lineHeight='24px'  fontSize='16px'>{empty_dot}</Text><Text lineHeight='24px'  fontSize='16px'>{empty_dot}</Text><Text fontSize='16px'>{empty_dot}</Text><Text fontSize='16px'>{empty_dot}</Text><Text fontSize='16px'>{empty_dot}</Text>*/}
