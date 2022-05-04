@@ -45,7 +45,7 @@ class Gallery extends React.Component {
       );
     }*/
 
-    const img_width = Math.min(0.75*document.documentElement.clientHeight*1.5, 0.67*document.documentElement.clientWidth);
+    let img_width = Math.min(0.75*document.documentElement.clientHeight*1.5, 0.67*document.documentElement.clientWidth);
     return (
       <Flex align='center' justify='center' height='100%'>
         <HStack spacing={'32px'/* TODO */}>

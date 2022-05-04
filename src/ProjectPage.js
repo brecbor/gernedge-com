@@ -29,6 +29,19 @@ import Project_45_14 from './Project_45_14';
 import Gallery from './Gallery';
 import MobileGallery from './MobileGallery';
 
+const send_nudes_images = [
+  '/images/send_nudes/01.jpg',
+  '/images/send_nudes/02.jpg',
+  '/images/send_nudes/03.jpg'
+];
+
+const units_images = [
+  '/images/units/01.jpg',
+  '/images/units/02.jpg',
+  '/images/units/03.jpg',
+  '/images/units/04.jpg',
+  '/images/units/05.jpg'
+];
 
 const content = {
   'units': {
@@ -36,22 +49,10 @@ const content = {
     'webTitle': 'UNITS',
     'noScroll': true,
     'content': (
-      <Gallery images={[
-        '/images/units/01.jpg',
-        '/images/units/02.jpg',
-        '/images/units/03.jpg',
-        '/images/units/04.jpg',
-        '/images/units/05.jpg'
-      ]}/>
+      <Gallery images={units_images}/>
     ),
     'phoneContent': (
-      <MobileGallery images={[
-        '/images/units/01.jpg',
-        '/images/units/02.jpg',
-        '/images/units/03.jpg',
-        '/images/units/04.jpg',
-        '/images/units/05.jpg'
-      ]}/>
+      <MobileGallery images={units_images}/>
     )
   },
   '45_14': {
@@ -63,7 +64,7 @@ const content = {
   },
   'field_recording': {
     'bgColor': 'white',
-    'title': 'FR_200607, 2020',
+    'title': 'FR_200607',
     'webTitle': 'FR_200607',
     'content': (
       <Box width='100%' position='relative' p='56.25% 0 0 0'>
@@ -95,12 +96,13 @@ const content = {
       </Box>
     ),
     'phoneContent': (
-      <Center width='100%' height='100%'>
+      <Box width='100%' height='100%'>
         {/*<Box mt={'0'/*'31.25vw'* /} width='100%' position='relative' p='37.5% 0 0 0'>*/}
         <iframe src="https://player.vimeo.com/video/600951447?h=1939fc6cc1&autoplay=1&title=0&byline=0&portrait=0"
-                style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0}} frameBorder="0"
+                style={{width: document.documentElement.clientWidth-32, height: '100%', position: 'absolute', top: 0, left: '16px', right: '16px'}} frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
-      </Center>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </Box>
     )
   },
   'send_nudes': {
@@ -108,18 +110,10 @@ const content = {
     'webTitle': 'SEND NUDES',
     'noScroll': true,
     'content': (
-      <Gallery imageBorder={true} images={[
-        '/images/send_nudes/01.jpg',
-        '/images/send_nudes/02.jpg',
-        '/images/send_nudes/03.jpg'
-      ]}/>
+      <Gallery imageBorder={true} images={send_nudes_images}/>
     ),
     'phoneContent': (
-      <MobileGallery imageBorder={true} images={[
-        '/images/send_nudes/01.jpg',
-        '/images/send_nudes/02.jpg',
-        '/images/send_nudes/03.jpg'
-      ]}/>
+      <MobileGallery imageBorder={true} images={send_nudes_images}/>
     )
   },
 };

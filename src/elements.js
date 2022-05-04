@@ -24,7 +24,7 @@ const next_project = {
   '45.588620, 14.447503, 2021': '/archive/memory_induced',
   'Memory Induced, 2020': '/archive/field_recording',
   'Memory Induced, colour video and sound, 2020': '/archive/field_recording',
-  'FR_200607, 2020': '/archive/send_nudes',
+  'FR_200607': '/archive/send_nudes',
   'Send Nudes, 2019': '/info',
   'Info': '/archive/units',
 };
@@ -37,17 +37,15 @@ function BasePage(props) {
   const [normal] = useMediaQuery(['(min-width: 30em)']);
 
   if(!normal) {
-
-    const title = (<Flex position='fixed' top='0' left='0' right='0'>
-      <Box p='16px' textStyle='normal' textAlign='left'>
-        {props.title}
-      </Box>
-    </Flex>);
-
     return (
-      <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100%'
+      <Box bgColor={/*props.bgColor ? props.bgColor : */'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100%'
            color='black'>
-        {props.title==='Info' ? null : title}
+        {props.title==='Info' ? null :
+          (<Flex position='fixed' top='0' left='0' right='0'>
+          <Box p='16px' textStyle='normal' textAlign='left'>
+            {props.title}
+          </Box>
+        </Flex>)}
         {props.title==='Info' ? (
           <Box width='100%' minHeight='100vh'>
             {props.children}

@@ -1,5 +1,18 @@
 import React from 'react';
-import { ChakraProvider, Box, Text, Link, VStack, Code, Grid, Image, Flex, Spacer, Heading } from '@chakra-ui/react';
+import {
+  ChakraProvider,
+  Box,
+  Text,
+  Link,
+  VStack,
+  Code,
+  Grid,
+  Image,
+  Flex,
+  Spacer,
+  Heading,
+  useMediaQuery,
+} from '@chakra-ui/react';
 import Font from './custom_font'
 import theme from './custom_theme'
 import { ColorModeSwitcher } from './ColorModeSwitcher';
@@ -9,6 +22,8 @@ import {ScrollToTop} from './ScrollToTop';
 import { BasePage, NavBar, ArchiveButton, TopAlignedText, MyExternalLink } from './elements';
 
 function Info(props) {
+  const [normal] = useMediaQuery(['(min-width: 30em)']);
+
   return (
     <BasePage title='Info' webTitle={props.webTitle}>
       <VStack spacing={{base: '48px', sm: '64px'}} pl='16px' pr={{base: '16px', sm: 0}} textAlign='justify'
@@ -23,7 +38,7 @@ function Info(props) {
           </Text>
         </VStack>
         <Box width='100%'>
-          <Image width='100%' src='/images/jerry.jpg' alt='jernej'/>
+          <Image width='100%' src={normal ? '/images/jerry.jpg' : '/images/info-fon.jpg'} alt='jernej'/>
         </Box>
       </VStack>
     </BasePage>

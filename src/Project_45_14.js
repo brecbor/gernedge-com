@@ -2,6 +2,19 @@ import { Grid, GridItem, Image, VStack, HStack, Box, useDimensions, Text, useMed
 import React from 'react';
 import { TopAlignedText } from './elements';
 
+const phoneImages = [
+  '/images/45_14/1.jpg',
+  '/images/45_14/2.jpg',
+  '/images/45_14/3.jpg',
+  '/images/45_14/4.jpg',
+  '/images/45_14/6.png',
+  '/images/45_14/9.jpg',
+  '/images/45_14/8.jpg',
+  '/images/45_14/7.jpg',
+  '/images/45_14/10.jpg',
+  '/images/45_14/11.jpg',
+  '/images/45_14/12.jpg',
+];
 
 function Project_45_14() {
   /*const image5Ref = React.useRef();
@@ -21,19 +34,28 @@ function Project_45_14() {
 
   if(!normal) {
     let images = [];
-    for(let i=1; i<12; i++) {
-      let name = '/images/45_14/'+i+'.jpg';
-      if(i === 6) {
-        name = '/images/45_14/'+i+'.png'
-      }
+    //alert('tuki - phone images length ' + phoneImages.length);
+    for(let i=0; i<phoneImages.length; i++) {
+      //alert(i, ' / ', phoneImages.length);
       images.push(
-        <Image width='100%' src={name} alt='45_14/1'/>
+        <Image width='100%' src={phoneImages[i]} alt='45_14/1'/>
       );
+      //if(images.length > 20) alert('images in koordinates');
     }
+    //alert('tuki');
     return (
-      <Box width='100%'>
+      <VStack width='100%' spacing={0}>
         {images}
-      </Box>
+        <Box p='16px' textAlign='justify'>
+          <Text lineHeight='24px'>
+            &emsp;With my retreats to nature I am developing a method of deepening our connectedness with it. I take the concept of the dérive as a basis of my work, which theorist and philosopher Guy Debord describes as aimless, random drifting through a place, guided by whim and an awareness of how different spaces draw you in or repel you. The work can be read very concretely, tied to a particular moment and place. When in nature, I make my way through and, inevitably, I also leave a trace.
+          </Text>
+          <Text textStyle='normal' lineHeight='24px'>
+            &emsp;Through this productive experience, the thought becomes embodied in a medium that has its limitations but is, nevertheless, prolonged by it. I would see the same things with or without the camera. I would experience the same things with or without the camera. But it is my desire to experience profoundly and through the mediation of the camera to think photographically. In this sense, the series is a dialogue between transience and eternity. The view of the sky might be one of the few shared visions we still have with our ancestors and is therefore eternal. But the land, the trees... they are in constant change. Without memory and without future – just silence.
+          </Text>
+        </Box>
+        <Box height='100vh'/>
+      </VStack>
     );
   }
 
@@ -47,7 +69,7 @@ function Project_45_14() {
 
   const img3_pt = image1Dim && image2Dim && image1Dim.contentBox.height ? image1Dim.contentBox.height : '50vh';
   const img3_height = image2Dim && image2Dim.paddingBox.height ? image2Dim.paddingBox.height : 100;
-  console.log('img3_pt: '+ img3_pt)
+  console.log('img3_pt: '+ img3_pt);
 
   const img4_pt = image2Dim ? document.documentElement.clientHeight - image2Dim.contentBox.height/2 : '50vh';
   // hidden pixels: document.documentElement.scrollTop

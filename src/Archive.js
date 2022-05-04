@@ -23,9 +23,9 @@ function Archive(props) {
   const [normal, isLg] = useMediaQuery(['(min-width: 30em)', '(min-width: 62em)']);
 
   const n_columns = isLg ? 3 : (normal ? 2 : 1);
+  let archive_buttons = [];
 
   if(!normal) {
-    let archive_buttons = [];
     for(let i=0; i<projects.length; i++) {
       archive_buttons.push(
         <MyLink width='100%' to={'/archive/' + projects[i].name} textStyle='normal'>
@@ -34,12 +34,14 @@ function Archive(props) {
                  alt={projects[i].name + '-cover'}/>
         </MyLink>
       );
+      if(archive_buttons.length > 20) alert('archive_buttons1');
     }
     archive_buttons.push(
       <MyLink width='100%' to='/info' textStyle='normal'>
         <Image width='100%' src='/images/info-fon.jpg' alt='info-cover'/>
       </MyLink>
     );
+    if(archive_buttons.length > 20) alert('archive_buttons1');
 
     return (
       <VStack w='100%' spacing='0'>
@@ -48,14 +50,17 @@ function Archive(props) {
     );
   }
 
-  let archive_buttons = [];
+  //let archive_buttons = [];
+  if(archive_buttons.length > 0) alert('archive_buttons0');
   for(let i=0; i<n_columns; i++) {
     archive_buttons.push([]);
+    if(archive_buttons.length > 20) alert('archive_buttons2');
   }
   for(let i=0; i<projects.length; i++) {
     let column_index = column_indices[n_columns][i];
     archive_buttons[column_index].push(<ArchiveButton name={projects[i].name} title={projects[i].title}
                                                       coverImage={projects[i].coverImage}/>);
+    if(archive_buttons[column_index].length > 20) alert('archive_buttons column_index');
   }
 
   let columns = [];
@@ -65,6 +70,7 @@ function Archive(props) {
         {archive_buttons[i]}
       </VStack>
     );
+    if(columns.length > 20) alert('archive columns');
   }
   return (
     <BasePage title='Archive' webTitle={props.webTitle}>
