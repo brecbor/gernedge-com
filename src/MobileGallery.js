@@ -14,8 +14,6 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import {useSwipeable} from 'react-swipeable';
-import { IconContext } from "react-icons";
-import { BsCircleFill, BsCircle } from "react-icons/bs";
 
 function MobileGallery(props) {
   const [index, setIndex] = React.useState(0);

@@ -13,11 +13,6 @@ import {
   Heading,
   useMediaQuery,
 } from '@chakra-ui/react';
-import { Link as RouterLink } from "react-router-dom";
-import Font from './custom_font'
-import theme from './custom_theme'
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
 import {ScrollToTop} from './ScrollToTop';
 import {BasePage, NavBar, ArchiveButton} from './elements';
 import Archive from './Archive';

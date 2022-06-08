@@ -1,6 +1,5 @@
-import { Grid, GridItem, Image, VStack, HStack, Box, useDimensions, Text, useMediaQuery } from '@chakra-ui/react';
+import { Grid, GridItem, Image, VStack, HStack, Box, useDimensions, Text } from '@chakra-ui/react';
 import React from 'react';
-import { TopAlignedText } from './elements';
 
 const phoneImages = [
   '/images/45_14/1.jpg',

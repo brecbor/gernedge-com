@@ -17,14 +17,7 @@ import {
   useMediaQuery,
   Center
 } from '@chakra-ui/react';
-import Font from './custom_font'
-import theme from './custom_theme'
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
-import { Link as RouterLink } from 'react-router-dom';
-import {ScrollToTop} from './ScrollToTop';
 import {BasePage, NavBar, ArchiveButton} from './elements';
-import Archive from './Archive';
 import Project_45_14 from './Project_45_14';
 import Gallery from './Gallery';
 import MobileGallery from './MobileGallery';

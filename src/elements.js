@@ -14,10 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import React, { useEffect } from 'react';
-import Font from './custom_font';
-import theme from './custom_theme';
 import { ScrollToTop } from './ScrollToTop';
-import Archive from './Archive';
 
 const next_project = {
   'Units, 2021': '/archive/45_14',
