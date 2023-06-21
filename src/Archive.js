@@ -3,6 +3,8 @@ import { ChakraProvider, Box, Text, Link, VStack, HStack, Code, Grid, Image, Fle
 import { BasePage, NavBar, ArchiveButton, MyLink } from './elements';
 
 const projects = [
+  {name: 'accidental_bursts', title: 'ACCIDENTAL BURSTS', coverImage:'Naslovna.JPG'},
+  {name: 'three_men_contemplating', title: 'THREE MEN CONTEMPLATING', coverImage:'Naslovna.jpg'},
   {name: 'units', title: 'UNITS', coverImage:'03.jpg'},
   {name: '45_14', title: '45.588620, 14.447503', coverImage:'1.jpg'},
   {name: 'memory_induced', title: 'MEMORY INDUCED', coverImage:'1.jpg'},
@@ -11,7 +13,7 @@ const projects = [
 ];
 
 // for each number of columns it describes for each project to which column it goes
-const column_indices = [null, [0, 0, 0, 0, 0], [0, 1, 0, 1, 0], [0, 1, 2, 0, 2]];
+const column_indices = [null, [0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 1, 0, 1, 0], [0, 1, 2, 0, 1, 2, 1]];
 
 function Archive(props) {
   const [normal, isLg] = useMediaQuery(['(min-width: 30em)', '(min-width: 62em)']);
