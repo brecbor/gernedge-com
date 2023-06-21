@@ -4,22 +4,22 @@ from PIL import Image
 
 with open('../../tinify_api_key.txt', 'r') as f:
 	tinify.key = f.read()
-
+'''
 ORIGINAL_IMAGES = '../../fon_verzija_slike/'
 COMPRESSED_IMAGES = '../../fon_verzija_slike_compressed/'
 image_list = ['04.jpg', '06.jpg']
 '''
-ORIGINAL_IMAGES = '../../original_images/'
-COMPRESSED_IMAGES = '../../compressed_images/'
+ORIGINAL_IMAGES = '../../original_images/accidental_bursts/'
+COMPRESSED_IMAGES = '../../compressed_images/accidental_bursts/'
 image_list = None
-'''
+
 
 MAX_WIDTH = 1500
 
 
 for (dirpath, dirnames, filenames) in os.walk(ORIGINAL_IMAGES):
 	for f in filenames:
-		if image_list is None and (f.endswith('.jpg') or f.endswith('.png')) or f in image_list:  
+		if image_list is None and (f.lower().endswith('.jpg') or f.lower().endswith('.png')) or image_list is not None and f in image_list:  
 			image = Image.open(f'{dirpath}/{f}')
 			if(image.size[0] < MAX_WIDTH):
 				print(f'compressing file {dirpath}/{f} (width: {image.size[0]}, height: {image.size[1]})')
