@@ -11,6 +11,10 @@ const theme = extendTheme({
     }*///'MonumentGrotesk, sans-serif',
   },
   textStyles: {
+    mg_small_not_bold: {
+      fontFamily: 'MonumentGrotesk',
+      fontSize: '12px'
+    },
     base: {
       fontFamily: 'MonumentGrotesk',
       fontWeight: 'bold',

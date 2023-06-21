@@ -194,5 +194,14 @@ function MyExternalLink(props) {
   );
 }
 
+function TitledImage(props) {
+  return (
+    <VStack spacing='8px'>
+      <Image src={props.src} alt={props.title} width='100%'/>
+      <Text textStyle='mg_small_not_bold' width='100%'>{props.title}</Text>
+    </VStack>
+  );
+}
 
-export {BasePage, NavBar, ArchiveButton, TopAlignedText, MyLink, MyExternalLink};
+
+export {BasePage, NavBar, ArchiveButton, TopAlignedText, MyLink, MyExternalLink, TitledImage};

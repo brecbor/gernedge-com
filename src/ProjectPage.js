@@ -21,6 +21,7 @@ import {BasePage, NavBar, ArchiveButton} from './elements';
 import Project_45_14 from './Project_45_14';
 import Gallery from './Gallery';
 import MobileGallery from './MobileGallery';
+import AccidentalBursts from './AccidentalBursts';
 
 const send_nudes_images = [
   '/images/send_nudes/01.jpg',
@@ -37,6 +38,16 @@ const units_images = [
 ];
 
 const content = {
+  'accidental_bursts': {
+    'title': 'Accidental Bursts',
+    'webTitle': 'ACCIDENTAL BURSTS',
+    'content': (
+      <AccidentalBursts phone={false}/>
+    ),
+    'phoneContent': (
+      <AccidentalBursts phone={false}/>
+    )
+  },
   'three_men_contemplating': {
     'title': 'Three Men Contemplating',
     'webTitle': 'THREE MEN CONTEMPLATING',

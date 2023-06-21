@@ -9,6 +9,10 @@ const Font = () => (
         font-weight: bold;
         src: url('/fonts/MonumentGrotesk-Bold.otf') format('opentype');
       }
+      @font-face {
+        font-family: 'MonumentGrotesk';
+        src: url('/fonts/MonumentGrotesk-Regular.otf') format('opentype');
+      }
       `}
     /*styles={`
       /*@font-face {
