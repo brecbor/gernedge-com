@@ -31,6 +31,12 @@ function Project_45_14(props) {
 
   //const [normal] = useMediaQuery(['(min-width: 30em)']);
 
+  const image1Ref = React.useRef();
+  const image1Dim = useDimensions(image1Ref, true);
+
+  const image2Ref = React.useRef();
+  const image2Dim = useDimensions(image2Ref, true);
+
   if(props.phone) {
     let images = [];
     //alert('tuki - phone images length ' + phoneImages.length);
@@ -57,12 +63,6 @@ function Project_45_14(props) {
       </VStack>
     );
   }
-
-  const image1Ref = React.useRef();
-  const image1Dim = useDimensions(image1Ref, true);
-
-  const image2Ref = React.useRef();
-  const image2Dim = useDimensions(image2Ref, true);
 
   const img2_pt = image1Dim && image1Dim.contentBox.height ? image1Dim.contentBox.height/2 : '50vh';
 
