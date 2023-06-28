@@ -52,13 +52,11 @@ const content = {
     'title': 'Three Men Contemplating',
     'webTitle': 'THREE MEN CONTEMPLATING',
     'content': (
-      <Box m='16px' maxHeight='90vh'>
-      <Box width='100%' position='relative' p='56.25% 0 0 0' maxHeight='90vh'>
+      <Box width='100%' position='relative' p='56.25% 0 0 0'>
         <iframe src="https://player.vimeo.com/video/826495543?h=4b9f6b8cc2&autoplay=1&title=0&byline=0&portrait=0" 
-                style={{width: '100%', height: '100%', maxHeight: '90vh', position: 'absolute', top: 0, left: 0}} frameborder="0" 
+                style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0}} frameborder="0" 
                 allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         <script src="https://player.vimeo.com/api/player.js"></script>
-      </Box>
       </Box>
     ),
     'phoneContent': (
