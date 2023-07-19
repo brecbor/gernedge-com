@@ -35,6 +35,9 @@ function App(props) {
       <Box position='absolute' bottom='0' left='0' m='16px'>
         <Text textStyle='small' lineHeight='1' color='black'>Code by Bor Brecelj. &copy; Images Jernej Šimec.</Text>
       </Box>
+      <Flex height='50vh' position='fixed' top='25vh' left='0' right='0' width='100%'>
+        <Image src='/images/Gernedge_Main_photo.jpg' alt='main photo' height='100%' margin='auto'/>
+      </Flex>
     </Box>
   );
 }
