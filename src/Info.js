@@ -32,7 +32,7 @@ function Info(props) {
           </Text>
         </VStack>
         <Box width='100%'>
-          <Image width='100%' src={normal ? '/images/Info_portrait.jpg' : '/images/info-fon.jpg'} alt='jernej'/>
+          <Image width='100%' src='/images/Info_portrait.jpg' alt='jernej'/>
         </Box>
       </VStack>
     </BasePage>

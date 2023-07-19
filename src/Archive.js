@@ -36,7 +36,7 @@ function Archive(props) {
     }
     phone_archive_buttons.push(
       <MyLink width='100%' to='/info' textStyle='normal'>
-        <Image width='100%' src='/images/info-fon.jpg' alt='info-cover'/>
+        <Image width='100%' src='/images/Info_portrait.jpg' alt='info-cover'/>
       </MyLink>
     );
     //if(phone_archive_buttons.length > 20) alert('archive_buttons1');
