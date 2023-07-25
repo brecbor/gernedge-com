@@ -22,6 +22,7 @@ import Project_45_14 from './Project_45_14';
 import Gallery from './Gallery';
 import MobileGallery from './MobileGallery';
 import AccidentalBursts from './AccidentalBursts';
+import Cycle from './Cycle';
 
 const send_nudes_images = [
   '/images/send_nudes/01.jpg',
@@ -143,6 +144,18 @@ const content = {
       <MobileGallery imageBorder={true} images={send_nudes_images}/>
     )
   },
+  'cycle': {
+    'title': 'Cycle',
+    'webTitle': 'CYCLE',
+    'noScroll': false,
+    'startOnTop': true,
+    'content': (
+      <Cycle/>
+    ),
+    'phoneContent': (
+      <Cycle/>
+    )
+  },
 };
 
 
@@ -162,6 +175,7 @@ function ProjectPage() {
               webTitle={content[id].webTitle}
               bgColor={content[id].bgColor}
               noScroll={content[id].noScroll}
+              startOnTop={content[id].startOnTop}
               /*noPhone={normal}*/>
       {!normal && content[id].phoneContent ? content[id].phoneContent : content[id].content}
     </BasePage>

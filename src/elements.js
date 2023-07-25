@@ -91,13 +91,13 @@ function BasePage(props) {
       <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100vh'
            color='black'>
         <ScrollToTop/>
-        <NavBar/>
-        <Box height='50vh'/>
+        <NavBar title={props.title}/>
+        {!props.startOnTop ? (<Box height='50vh'/>) : null}
         {props.children}
-        <Box height='100vh'/>
-        <Box p='16px' textStyle='normal' textAlign='left'>
+        {!props.startOnTop ? (<Box height='100vh'/>) : null}
+        {!props.title==='Cycle' ? (<Box p='16px' textStyle='normal' textAlign='left'>
           {props.title}
-        </Box>
+        </Box>) : null}
       </Box>
     );
   }
@@ -127,6 +127,44 @@ class NavBar extends React.Component {
   };
 
   render() {
+    if(this.props.title === 'Cycle') {
+      return (
+        <Box>
+        <Flex height='48px' position='fixed' top='0' left='0' right='0' color={this.state.scrolledTop ? 'black' : 'white'}
+              visibility={this.state.scrolledTop || this.state.scrolledBottom ? 'visible' : 'hidden'}>
+          <Box m='16px'>
+            <TopAlignedText textStyle='normal'>
+              <MyLink to='/'>GERNEDGE</MyLink>
+            </TopAlignedText>
+          </Box>
+          <Spacer />
+          <Box m='16px'>
+            <HStack spacing='32px'>
+              <TopAlignedText textStyle='normal'>
+                <MyLink to='/archive'>Archive</MyLink>
+              </TopAlignedText>
+              <TopAlignedText textStyle='normal'>
+                <MyLink to='/info'>Info</MyLink>
+              </TopAlignedText>
+            </HStack>
+          </Box>
+        </Flex>
+
+
+
+        <Flex position='fixed' bottom='0' left='0' right='0' color={this.state.scrolledTop ? 'black' : 'white'}
+              visibility={this.state.scrolledTop || this.state.scrolledBottom ? 'visible' : 'hidden'}>
+          <Box m='16px'>
+            <Text textStyle='normal'>Cycle</Text>
+          </Box>
+          
+        </Flex>
+
+
+
+        </Box>
+      );
+    }
     return (
       <Flex height='48px' position='fixed' top='0' left='0' right='0' color={this.props.color}
             visibility={this.state.scrolledTop || this.state.scrolledBottom ? 'visible' : 'hidden'}>
