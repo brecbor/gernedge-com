@@ -130,7 +130,7 @@ class NavBar extends React.Component {
     if(this.props.title === 'Cycle') {
       return (
         <Box>
-        <Flex height='48px' position='fixed' top='0' left='0' right='0' color={this.state.scrolledTop ? 'black' : 'white'}
+        <Flex height='48px' position='fixed' top='0' left='0' right='0' color={this.state.scrolledTop ? 'black' : 'rgb(204, 204, 204)'}
               visibility={this.state.scrolledTop || this.state.scrolledBottom ? 'visible' : 'hidden'}>
           <Box m='16px'>
             <TopAlignedText textStyle='normal'>
@@ -152,7 +152,7 @@ class NavBar extends React.Component {
 
 
 
-        <Flex position='fixed' bottom='0' left='0' right='0' color={this.state.scrolledTop ? 'black' : 'white'}
+        <Flex position='fixed' bottom='0' left='0' right='0' color={this.state.scrolledTop ? 'black' : 'rgb(204, 204, 204)'}
               visibility={this.state.scrolledTop || this.state.scrolledBottom ? 'visible' : 'hidden'}>
           <Box m='16px'>
             <Text textStyle='normal'>Cycle</Text>

@@ -23,12 +23,12 @@ const images = [
   {img: '/images/cycle/4.jpg', row: 1, col: 4},
   {img: '/images/cycle/5.jpg', row: 1, col: 5},
   {img: '/images/cycle/6.jpg', row: 1, col: 6},
-  {img: '/images/cycle/7.jpg', row: 2, col: 1},
-  {img: '/images/cycle/8.jpg', row: 2, col: 2},
-  {img: '/images/cycle/9.jpg', row: 2, col: 3},
-  {img: '/images/cycle/10.jpg', row: 2, col: 4},
-  {img: '/images/cycle/11.jpg', row: 2, col: 5},
-  {img: '/images/cycle/12.jpg', row: 2, col: 6},  
+  {img: '/images/cycle/7.jpg', row: 2, col: 6},
+  {img: '/images/cycle/8.jpg', row: 2, col: 5},
+  {img: '/images/cycle/9.jpg', row: 2, col: 4},
+  {img: '/images/cycle/10.jpg', row: 2, col: 3},
+  {img: '/images/cycle/11.jpg', row: 2, col: 2},
+  {img: '/images/cycle/12.jpg', row: 2, col: 1},  
 ];
 
 function Cycle(props) {

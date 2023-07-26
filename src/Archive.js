@@ -3,21 +3,24 @@ import { ChakraProvider, Box, Text, Link, VStack, HStack, Code, Grid, Image, Fle
 import { BasePage, NavBar, ArchiveButton, MyLink } from './elements';
 
 const projects = [
-  {name: 'cycle', title: 'Cycle', coverImage:'11.jpg'},
 
   {name: 'accidental_bursts', title: 'Accidental Bursts', coverImage:'Naslovna.JPG'},
   {name: '45_14', title: '45.588620, 14.447503', coverImage:'1.jpg'},
-  {name: 'field_recording', title: 'FR_200607', coverImage:'1.jpg', phoneCoverImage: 'naslovna-fon.jpg'},
+  {name: 'three_men_contemplating', title: 'Three Men Contemplating', coverImage:'Naslovna.jpg'},
   
   {name: 'memory_induced', title: 'Memory Induced', coverImage:'1.jpg'},
   {name: 'send_nudes', title: 'Send Nudes', coverImage:'Naslovna.jpg'},
-  {name: 'three_men_contemplating', title: 'Three Men Contemplating', coverImage:'Naslovna.jpg'},
+  {name: 'cycle', title: 'Cycle', coverImage:'11.jpg'},
+  
+  {name: 'field_recording', title: 'FR_200607', coverImage:'1.jpg', phoneCoverImage: 'naslovna-fon.jpg'},
+  
+  
 
-  {name: 'units', title: 'Units', coverImage:'02.jpg'},
+  //{name: 'units', title: 'Units', coverImage:'02.jpg'},
 ];
 
 // for each number of columns it describes for each project to which column it goes
-const column_indices = [null, [0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 1, 0, 1, 0, 1], [0, 1, 2, 0, 1, 2, 0, 1]];
+const column_indices = [null, [0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 1, 0, 1, 0], [0, 1, 2, 0, 1, 2, 2]];
 
 function Archive(props) {
   const [normal, isLg] = useMediaQuery(['(min-width: 30em)', '(min-width: 62em)']);
