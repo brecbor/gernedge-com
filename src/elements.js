@@ -95,7 +95,7 @@ function BasePage(props) {
         {!props.startOnTop ? (<Box height='50vh'/>) : null}
         {props.children}
         {!props.startOnTop ? (<Box height='100vh'/>) : null}
-        {!props.title==='Cycle' ? (<Box p='16px' textStyle='normal' textAlign='left'>
+        {props.title!=='Cycle' ? (<Box p='16px' textStyle='normal' textAlign='left'>
           {props.title}
         </Box>) : null}
       </Box>
