@@ -27,6 +27,17 @@ const andrzej_images = [
 function Andrzej(props) {
   const [normal] = useMediaQuery(['(min-width: 30em)']);
 
+  if(!normal) {
+    return (
+      <VStack width='100%' spacing={0}>
+        {andrzej_images.map((img) => (
+          <Image width='100%' src={img} alt='andrzej'/>
+        ))}
+        <Box height='100vh'/>
+      </VStack>
+    );
+  }
+
   return (
     <VStack spacing='50vh'>
       {andrzej_images.map((img) => (

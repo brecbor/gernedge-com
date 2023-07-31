@@ -32,6 +32,17 @@ const images = [
 function AroundTheBend(props) {
   const [normal] = useMediaQuery(['(min-width: 30em)']);
 
+  if(!normal) {
+    return (
+      <VStack spacing='0'>
+        {images.map((img) => (
+          <Image src={img} alt='around_the_bend' width='100%' px='16px' pt='50vh'/>
+        ))}
+        <Box height='100vh'/>
+      </VStack>
+    );
+  }
+
   return (
     <VStack spacing='50vh'>
       {images.map((img) => (

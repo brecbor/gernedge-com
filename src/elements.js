@@ -17,13 +17,17 @@ import React, { useEffect } from 'react';
 import { ScrollToTop } from './ScrollToTop';
 
 const next_project = {
-  'Units, 2021': '/archive/45_14',
-  '45.588620, 14.447503, 2021': '/archive/memory_induced',
-  'Memory Induced, 2020': '/archive/field_recording',
-  'Memory Induced, colour video and sound, 2020': '/archive/field_recording',
-  'FR_200607': '/archive/send_nudes',
-  'Send Nudes, 2019': '/info',
-  'Info': '/archive/units',
+  'Accidental Bursts': '/archive/45_14',
+  '45.588620, 14.447503, 2021': '/archive/three_men_contemplating',
+  'Three Men Contemplating': '/archive/memory_induced',
+  'Memory Induced, 2020': '/archive/send_nudes',
+  'Memory Induced, colour video and sound, 2020': '/archive/send_nudes',
+  'Send Nudes, 2019': '/archive/cycle',
+  'Cycle': '/archive/field_recording',
+  'FR_200607': '/archive/andrzej',
+  'Andrzej': '/archive/around_the_bend',
+  'Around the Bend': '/info',
+  'Info': '/archive/accidental_bursts',
 };
 
 function BasePage(props) {
@@ -37,7 +41,7 @@ function BasePage(props) {
 
   if(!normal && !props.noPhone) {
     return (
-      <Box bgColor={/*props.bgColor ? props.bgColor : */'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100%'
+      <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100%'
            color={color}>
         {props.title==='Info' ? null :
           (<Flex position='fixed' top='0' left='0' right='0'>

@@ -63,12 +63,13 @@ const content = {
       </Box>
     ),
     'phoneContent': (
-      <Center height='100%' width='100%'>
-        <iframe src="https://player.vimeo.com/video/826495543?h=4b9f6b8cc2&autoplay=1&title=0&byline=0&portrait=0" 
-                style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0}} frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      <Box width='100%' height='100%'>
+        {/*<Box mt={'0'/*'31.25vw'* /} width='100%' position='relative' p='37.5% 0 0 0'>*/}
+        <iframe src="https://player.vimeo.com/video/826495543?h=4b9f6b8cc2&autoplay=1&title=0&byline=0&portrait=0"
+                style={{width: document.documentElement.clientWidth-32, height: '100%', position: 'absolute', top: 0, left: '16px', right: '16px'}} frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
         <script src="https://player.vimeo.com/api/player.js"></script>
-      </Center>
+      </Box>
     )
   },
   'units': {
