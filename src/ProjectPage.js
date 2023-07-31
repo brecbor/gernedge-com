@@ -23,6 +23,8 @@ import Gallery from './Gallery';
 import MobileGallery from './MobileGallery';
 import AccidentalBursts from './AccidentalBursts';
 import Cycle from './Cycle';
+import Andrzej from './Andrzej';
+import AroundTheBend from './AroundTheBend';
 
 const send_nudes_images = [
   '/images/send_nudes/01.jpg',
@@ -156,6 +158,28 @@ const content = {
       <Cycle/>
     )
   },
+  'andrzej': {
+    'title': 'Andrzej',
+    'webTitle': 'ANDRZEJ',
+    'content': (
+      <Andrzej/>
+    ),
+    'phoneContent': (
+      <Andrzej/>
+    )
+  },
+  'around_the_bend': {
+    'title': 'Around the Bend',
+    'webTitle': 'AROUND THE BEND',
+    'bgColor': 'black',
+    'textColor': 'rgb(204, 204, 204)',
+    'content': (
+      <AroundTheBend/>
+    ),
+    'phoneContent': (
+      <AroundTheBend/>
+    )
+  },
 };
 
 
@@ -176,6 +200,7 @@ function ProjectPage() {
               bgColor={content[id].bgColor}
               noScroll={content[id].noScroll}
               startOnTop={content[id].startOnTop}
+              textColor={content[id].textColor}
               /*noPhone={normal}*/>
       {!normal && content[id].phoneContent ? content[id].phoneContent : content[id].content}
     </BasePage>

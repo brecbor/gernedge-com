@@ -9,13 +9,12 @@ ORIGINAL_IMAGES = '../../fon_verzija_slike/'
 COMPRESSED_IMAGES = '../../fon_verzija_slike_compressed/'
 image_list = ['04.jpg', '06.jpg']
 '''
-ORIGINAL_IMAGES = '../../nove_slike_14-07-2023/'
-COMPRESSED_IMAGES = '../../nove_slike_14-07-2023_compressed/'
+ORIGINAL_IMAGES = '../../nove_slike_26-07-2023/around_the_bend/'
+COMPRESSED_IMAGES = '../../nove_slike_26-07-2023_compressed/around_the_bend/'
 image_list = None
 
 
 MAX_WIDTH = 1500
-# todo: changed .jpg to .jpeg so now it will not work on .jpg
 
 for (dirpath, dirnames, filenames) in os.walk(ORIGINAL_IMAGES):
 	for f in filenames:

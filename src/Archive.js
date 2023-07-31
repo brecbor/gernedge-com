@@ -13,14 +13,14 @@ const projects = [
   {name: 'cycle', title: 'Cycle', coverImage:'11.jpg'},
   
   {name: 'field_recording', title: 'FR_200607', coverImage:'1.jpg', phoneCoverImage: 'naslovna-fon.jpg'},
+  {name: 'andrzej', title: 'Andrzej', coverImage:'1.jpg'},
+  {name: 'around_the_bend', title: 'Around the Bend', coverImage:'1.jpg'},
   
-  
-
   //{name: 'units', title: 'Units', coverImage:'02.jpg'},
 ];
 
 // for each number of columns it describes for each project to which column it goes
-const column_indices = [null, [0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 1, 0, 1, 0], [0, 1, 2, 0, 1, 2, 2]];
+const column_indices = [null, [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 1, 0, 1, 0, 1, 0], [0, 1, 2, 0, 1, 2, 2, 0, 1]];
 
 function Archive(props) {
   const [normal, isLg] = useMediaQuery(['(min-width: 30em)', '(min-width: 62em)']);

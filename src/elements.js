@@ -33,10 +33,12 @@ function BasePage(props) {
 
   const [normal] = useMediaQuery(['(min-width: 30em)']);
 
+  var color = props.textColor ? props.textColor : 'black'
+
   if(!normal && !props.noPhone) {
     return (
       <Box bgColor={/*props.bgColor ? props.bgColor : */'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100%'
-           color='black'>
+           color={color}>
         {props.title==='Info' ? null :
           (<Flex position='fixed' top='0' left='0' right='0'>
           <Box p='16px' textStyle='normal' textAlign='left'>
@@ -72,7 +74,7 @@ function BasePage(props) {
   if(props.noScroll) {
     return (
       <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' height='100vh'
-           color='black'>
+           color={color}>
         <ScrollToTop/>
         <NavBar/>
         <Box height='100%'>
@@ -89,7 +91,7 @@ function BasePage(props) {
   else {
     return (
       <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100vh'
-           color='black'>
+           color={color}>
         <ScrollToTop/>
         <NavBar title={props.title}/>
         {!props.startOnTop ? (<Box height='50vh'/>) : null}
