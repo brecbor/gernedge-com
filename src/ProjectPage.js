@@ -85,6 +85,7 @@ const content = {
   '45_14': {
     'title': '45.588620, 14.447503, 2021',
     'webTitle': '45.588620, 14.447503',
+    'showTitleOnTop': true,
     'content': (
       <Project_45_14 phone={false}/>
     ),
@@ -201,6 +202,7 @@ function ProjectPage() {
               noScroll={content[id].noScroll}
               startOnTop={content[id].startOnTop}
               textColor={content[id].textColor}
+              showTitleOnTop={content[id].showTitleOnTop}
               /*noPhone={normal}*/>
       {!normal && content[id].phoneContent ? content[id].phoneContent : content[id].content}
     </BasePage>

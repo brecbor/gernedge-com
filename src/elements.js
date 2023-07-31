@@ -93,7 +93,7 @@ function BasePage(props) {
       <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100vh'
            color={color}>
         <ScrollToTop/>
-        <NavBar title={props.title}/>
+        <NavBar title={props.title} showTitleOnTop={props.showTitleOnTop}/>
         {!props.startOnTop ? (<Box height='50vh'/>) : null}
         {props.children}
         {!props.startOnTop ? (<Box height='100vh'/>) : null}
@@ -168,25 +168,38 @@ class NavBar extends React.Component {
       );
     }
     return (
-      <Flex height='48px' position='fixed' top='0' left='0' right='0' color={this.props.color}
-            visibility={this.state.scrolledTop || this.state.scrolledBottom ? 'visible' : 'hidden'}>
-        <Box m='16px'>
-          <TopAlignedText textStyle='normal'>
-            <MyLink to='/'>GERNEDGE</MyLink>
-          </TopAlignedText>
-        </Box>
-        <Spacer />
-        <Box m='16px'>
-          <HStack spacing='32px'>
+      <Box>
+        <Flex height='48px' position='fixed' top='0' left='0' right='0' color={this.props.color}
+              visibility={this.state.scrolledTop || this.state.scrolledBottom ? 'visible' : 'hidden'}>
+          <Box m='16px'>
             <TopAlignedText textStyle='normal'>
-              <MyLink to='/archive'>Archive</MyLink>
+              <MyLink to='/'>GERNEDGE</MyLink>
             </TopAlignedText>
-            <TopAlignedText textStyle='normal'>
-              <MyLink to='/info'>Info</MyLink>
-            </TopAlignedText>
-          </HStack>
-        </Box>
-      </Flex>
+          </Box>
+          <Spacer />
+          <Box m='16px'>
+            <HStack spacing='32px'>
+              <TopAlignedText textStyle='normal'>
+                <MyLink to='/archive'>Archive</MyLink>
+              </TopAlignedText>
+              <TopAlignedText textStyle='normal'>
+                <MyLink to='/info'>Info</MyLink>
+              </TopAlignedText>
+            </HStack>
+          </Box>
+        </Flex>
+
+        {this.props.showTitleOnTop ? (
+          <Flex position='fixed' bottom='0' left='0' right='0' color={this.props.color}
+                visibility={this.state.scrolledTop ? 'visible' : 'hidden'}>
+            <Box m='16px'>
+              <Text textStyle='normal'>{this.props.title}</Text>
+            </Box>
+            
+          </Flex>
+        ) : null}
+
+      </Box>
     );
   }
 }
