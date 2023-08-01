@@ -171,7 +171,7 @@ const content = {
     )
   },
   'around_the_bend': {
-    'title': 'Around the Bend',
+    'title': 'Around the Bend, 2023',
     'webTitle': 'AROUND THE BEND',
     'bgColor': 'black',
     'textColor': 'rgb(204, 204, 204)',

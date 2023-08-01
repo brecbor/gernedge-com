@@ -14,7 +14,7 @@ COMPRESSED_IMAGES = '../../nove_slike_26-07-2023_compressed/around_the_bend/'
 image_list = None
 
 
-MAX_WIDTH = 1500
+MAX_WIDTH = 1000000000 #1500
 
 for (dirpath, dirnames, filenames) in os.walk(ORIGINAL_IMAGES):
 	for f in filenames:

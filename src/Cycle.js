@@ -40,8 +40,6 @@ function Cycle(props) {
         {images.map((img) => (
           <Image width='100%' src={img.img} alt='cycle'/>
         ))}
-        <Image src='/images/cycle/Fire.jpg' alt='fire' width='100%'/>
-        <Box height='100vh'/>
       </VStack>
     );
   }

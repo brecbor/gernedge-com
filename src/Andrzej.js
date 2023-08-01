@@ -33,7 +33,6 @@ function Andrzej(props) {
         {andrzej_images.map((img) => (
           <Image width='100%' src={img} alt='andrzej'/>
         ))}
-        <Box height='100vh'/>
       </VStack>
     );
   }
@@ -44,7 +43,7 @@ function Andrzej(props) {
         <Box width='100%'>
           <Image src={img} alt='andrzej' width='100%'/>
           <Box height='50vh'/>
-          <Center width='100%' height='100vh'> 
+          <Center width='100%' height='100vh' p='16px'> 
             <Image src={img} alt='andrzej' py={{base: '48px', sm: '64px'}} height='100%'/>
           </Center>
         </Box>

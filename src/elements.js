@@ -26,7 +26,7 @@ const next_project = {
   'Cycle': '/archive/field_recording',
   'FR_200607': '/archive/andrzej',
   'Andrzej': '/archive/around_the_bend',
-  'Around the Bend': '/info',
+  'Around the Bend, 2023': '/info',
   'Info': '/archive/accidental_bursts',
 };
 
@@ -43,6 +43,7 @@ function BasePage(props) {
     return (
       <Box bgColor={props.bgColor ? props.bgColor : 'rgb(204, 204, 204)'} maxWidth='100vw' minHeight='100%'
            color={color}>
+        <ScrollToTop/>
         {props.title==='Info' ? null :
           (<Flex position='fixed' top='0' left='0' right='0'>
           <Box p='16px' textStyle='normal' textAlign='left'>
