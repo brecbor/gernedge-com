@@ -19,6 +19,19 @@ const projects = [
   //{name: 'units', title: 'Units', coverImage:'02.jpg'},
 ];
 
+const phone_projects = [
+  {name: 'accidental_bursts', title: 'Accidental Bursts', coverImage:'Naslovna.JPG'},
+  {name: '45_14', title: '45.588620, 14.447503', coverImage:'1.jpg'},
+  {name: 'andrzej', title: 'Andrzej', coverImage:'2.jpg'},
+  {name: 'around_the_bend', title: 'Around the Bend', coverImage:'8.jpg'},
+  {name: 'three_men_contemplating', title: 'Three Men Contemplating', coverImage:'Naslovna.jpg'},
+  {name: 'cycle', title: 'Cycle', coverImage:'11.jpg'},
+  {name: 'memory_induced', title: 'Memory Induced', coverImage:'1.jpg'},
+  {name: 'send_nudes', title: 'Send Nudes', coverImage:'Naslovna.jpg'},
+  {name: 'field_recording', title: 'FR_200607', coverImage:'1.jpg', phoneCoverImage: 'naslovna-fon.jpg'},
+  //{name: 'units', title: 'Units', coverImage:'02.jpg'},
+];
+
 // for each number of columns it describes for each project to which column it goes
 const column_indices = [null, [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 1, 0, 1, 0, 1, 0], [0, 1, 2, 0, 1, 2, 2, 0, 1]];
 
@@ -29,12 +42,12 @@ function Archive(props) {
   let phone_archive_buttons = [];
 
   if(!normal) {
-    for(let i=0; i<projects.length; i++) {
+    for(let i=0; i<phone_projects.length; i++) {
       phone_archive_buttons.push(
-        <MyLink width='100%' to={'/archive/' + projects[i].name} textStyle='normal'>
+        <MyLink width='100%' to={'/archive/' + phone_projects[i].name} textStyle='normal'>
           <Image width='100%'
-                 src={'/images/' + projects[i].name + '/' + (projects[i].phoneCoverImage ? projects[i].phoneCoverImage : projects[i].coverImage)}
-                 alt={projects[i].name + '-cover'}/>
+                 src={'/images/' + phone_projects[i].name + '/' + (phone_projects[i].phoneCoverImage ? phone_projects[i].phoneCoverImage : phone_projects[i].coverImage)}
+                 alt={phone_projects[i].name + '-cover'}/>
         </MyLink>
       );
       //if(phone_archive_buttons.length > 20) alert('archive_buttons1');
