@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   ChakraProvider,
   Box,
@@ -14,10 +15,12 @@ import {
   useMediaQuery,
 } from '@chakra-ui/react';
 import {ScrollToTop} from './ScrollToTop';
-import {BasePage, NavBar, ArchiveButton} from './elements';
+import { BasePage, NavBar, ArchiveButton, MyLink } from './elements';
 import Archive from './Archive';
 
 function App(props) {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = props.webTitle ? 'Gernedge | ' + props.webTitle : 'Gernedge';
   }, [props.webTitle]);
@@ -36,7 +39,7 @@ function App(props) {
         <Text textStyle='small' lineHeight='1' color='black'>Code by Bor Brecelj. &copy; Images Jernej Šimec.</Text>
       </Box>
       <Flex height='50vh' position='fixed' top='25vh' left='0' right='0' width='100%'>
-        <Image src='/images/Gernedge_Main_photo.jpg' alt='main photo' height='100%' margin='auto'/>
+          <Image src='/images/Gernedge_Main_photo.jpg' alt='main photo' height='100%' margin='auto' onClick={() => navigate('/archive')} _hover={{cursor: 'pointer'}}/> 
       </Flex>
     </Box>
   );

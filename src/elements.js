@@ -10,7 +10,9 @@ import {
   HStack,
   Button,
   useMediaQuery,
-  Center
+  Center,
+  Grid,
+  GridItem
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import React, { useEffect } from 'react';
@@ -139,22 +141,23 @@ class NavBar extends React.Component {
         <Box>
         <Flex height='48px' position='fixed' top='0' left='0' right='0' color={this.state.scrolledTop ? 'black' : 'rgb(204, 204, 204)'}
               visibility={this.state.scrolledTop || this.state.scrolledBottom ? 'visible' : 'hidden'}>
-          <Box m='16px'>
+          <Grid width='100%' m='16px' templateColumns='repeat(3, 1fr)' gap='16px'>
+          <GridItem>
             <TopAlignedText textStyle='normal'>
               <MyLink to='/'>GERNEDGE</MyLink>
             </TopAlignedText>
-          </Box>
-          <Spacer />
-          <Box m='16px'>
-            <HStack spacing='32px'>
-              <TopAlignedText textStyle='normal'>
-                <MyLink to='/archive'>Archive</MyLink>
-              </TopAlignedText>
-              <TopAlignedText textStyle='normal'>
-                <MyLink to='/info'>Info</MyLink>
-              </TopAlignedText>
-            </HStack>
-          </Box>
+          </GridItem>
+          <GridItem>
+            <TopAlignedText textStyle='normal'>
+              <MyLink to='/archive'>Archive</MyLink>
+            </TopAlignedText>
+          </GridItem>
+          <GridItem>
+            <TopAlignedText textStyle='normal'>
+              <MyLink to='/info'>Info</MyLink>
+            </TopAlignedText>
+          </GridItem>
+          </Grid>
         </Flex>
 
 
@@ -176,22 +179,23 @@ class NavBar extends React.Component {
       <Box>
         <Flex height='48px' position='fixed' top='0' left='0' right='0' color={this.props.color}
               visibility={this.state.scrolledTop || this.state.scrolledBottom ? 'visible' : 'hidden'}>
-          <Box m='16px'>
+          <Grid width='100%' m='16px' templateColumns='repeat(3, 1fr)' gap='16px'>
+          <GridItem>
             <TopAlignedText textStyle='normal'>
               <MyLink to='/'>GERNEDGE</MyLink>
             </TopAlignedText>
-          </Box>
-          <Spacer />
-          <Box m='16px'>
-            <HStack spacing='32px'>
-              <TopAlignedText textStyle='normal'>
-                <MyLink to='/archive'>Archive</MyLink>
-              </TopAlignedText>
-              <TopAlignedText textStyle='normal'>
-                <MyLink to='/info'>Info</MyLink>
-              </TopAlignedText>
-            </HStack>
-          </Box>
+          </GridItem>
+          <GridItem>
+            <TopAlignedText textStyle='normal'>
+              <MyLink to='/archive'>Archive</MyLink>
+            </TopAlignedText>
+          </GridItem>
+          <GridItem>
+            <TopAlignedText textStyle='normal'>
+              <MyLink to='/info'>Info</MyLink>
+            </TopAlignedText>
+          </GridItem>
+          </Grid>
         </Flex>
 
         {this.props.showTitleOnTop ? (

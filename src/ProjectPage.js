@@ -142,10 +142,10 @@ const content = {
     'webTitle': 'SEND NUDES',
     'noScroll': true,
     'content': (
-      <Gallery imageBorder={true} images={send_nudes_images}/>
+      <Gallery imageBorder={false} images={send_nudes_images}/>
     ),
     'phoneContent': (
-      <MobileGallery imageBorder={true} images={send_nudes_images}/>
+      <MobileGallery imageBorder={false} images={send_nudes_images}/>
     )
   },
   'cycle': {
