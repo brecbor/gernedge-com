@@ -43,9 +43,10 @@ function Andrzej(props) {
         <Box width='100%'>
           <Image src={img} alt='andrzej' width='100%'/>
           <Box height='50vh'/>
-          <Center width='100%' height='100vh' p='16px'> 
-            <Image src={img} alt='andrzej' py={{base: '48px', sm: '64px'}} height='100%'/>
-          </Center>
+
+          <Box width='100%' height='100vh' p='16px'>
+            <Image src={img} alt='andrzej' py={{base: '48px', sm: '64px'}} height='100%' margin='auto'/>
+          </Box>
         </Box>
       ))}
     </VStack>
