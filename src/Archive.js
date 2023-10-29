@@ -12,7 +12,7 @@ const projects = [
   {name: 'send_nudes', title: 'Send Nudes', coverImage:'Naslovna.jpg'},
   {name: 'cycle', title: 'Cycle', coverImage:'11.jpg'},
   
-  {name: 'puddles', title: 'Puddles', coverImage:'1.jpg'},
+  {name: 'puddles', title: 'Puddles', coverImage:'5.jpg'},
   {name: 'andrzej', title: 'Andrzej', coverImage:'2.jpg'},
   {name: 'around_the_bend', title: 'Around the Bend', coverImage:'8.jpg'},
   
@@ -30,7 +30,7 @@ const phone_projects = [
   {name: 'cycle', title: 'Cycle', coverImage:'11.jpg'},
   {name: 'memory_induced', title: 'Memory Induced', coverImage:'1.jpg'},
   {name: 'send_nudes', title: 'Send Nudes', coverImage:'Naslovna.jpg'},
-  {name: 'puddles', title: 'Puddles', coverImage:'1.jpg'},
+  {name: 'puddles', title: 'Puddles', coverImage:'5.jpg'},
   {name: 'field_recording', title: 'FR_200607', coverImage:'1.jpg', phoneCoverImage: 'naslovna-fon.jpg'},
   //{name: 'units', title: 'Units', coverImage:'02.jpg'},
 ];

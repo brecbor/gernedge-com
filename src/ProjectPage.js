@@ -146,6 +146,7 @@ const content = {
     )
   },
   'send_nudes': {
+    'bgColor': 'white',
     'title': 'Send Nudes, 2019',
     'webTitle': 'SEND NUDES',
     'noScroll': true,
