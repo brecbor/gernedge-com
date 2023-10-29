@@ -20,15 +20,18 @@ import { ScrollToTop } from './ScrollToTop';
 
 const next_project = {
   'Accidental Bursts': '/archive/45_14',
-  '45.588620, 14.447503, 2021': '/archive/three_men_contemplating',
-  'Three Men Contemplating': '/archive/memory_induced',
+  '45.588620, 14.447503, 2021': '/archive/andrzej',
+  'Andrzej': '/archive/around_the_bend',
+  'Around the Bend, 2023': '/archive/three_men_contemplating',
+  'Three Men Contemplating': '/archive/cycle',
+  'Cycle': '/archive/memory_induced',
   'Memory Induced, 2020': '/archive/send_nudes',
   'Memory Induced, colour video and sound, 2020': '/archive/send_nudes',
-  'Send Nudes, 2019': '/archive/cycle',
-  'Cycle': '/archive/field_recording',
-  'FR_200607': '/archive/andrzej',
-  'Andrzej': '/archive/around_the_bend',
-  'Around the Bend, 2023': '/info',
+  'Send Nudes, 2019': '/archive/puddles',
+  'Puddles': '/archive/field_recording',
+  'Every Puddle We Needed to Cross on Our Way to the Car in Banat, Serbia': '/archive/field_recording',
+  'FR_200607': '/info',
+  
   'Info': '/archive/accidental_bursts',
 };
 

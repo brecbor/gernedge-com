@@ -32,6 +32,14 @@ const send_nudes_images = [
   '/images/send_nudes/03.jpg'
 ];
 
+const puddles_images = [
+  '/images/puddles/1.jpg',
+  '/images/puddles/2.jpg',
+  '/images/puddles/3.jpg',
+  '/images/puddles/4.jpg',
+  '/images/puddles/5.jpg'
+];
+
 const units_images = [
   '/images/units/01.jpg',
   '/images/units/02.jpg',
@@ -146,6 +154,17 @@ const content = {
     ),
     'phoneContent': (
       <MobileGallery imageBorder={false} images={send_nudes_images}/>
+    )
+  },
+  'puddles': {
+    'title': 'Every Puddle We Needed to Cross on Our Way to the Car in Banat, Serbia',
+    'webTitle': 'PUDDLES',
+    'noScroll': true,
+    'content': (
+      <Gallery imageBorder={false} images={puddles_images}/>
+    ),
+    'phoneContent': (
+      <MobileGallery imageBorder={false} images={puddles_images}/>
     )
   },
   'cycle': {
